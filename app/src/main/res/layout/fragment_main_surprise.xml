@@ -1,0 +1,47 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical">
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/title_bar_height"
+        android:background="@drawable/bg_color_white">
+
+        <TextView
+            android:id="@+id/tool_text"
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:layout_centerInParent="true"
+            android:gravity="center"
+            android:text=""
+            android:textColor="@color/titleBlack"
+            android:textSize="@dimen/title_bar_title_size" />
+
+
+        <com.wingplus.coomohome.component.SquareImage
+            android:id="@+id/promotion_back"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentStart="true"
+            android:layout_centerInParent="true"
+            android:contentDescription="@string/word_back"
+            android:onClick="onClick"
+            android:paddingStart="16dp"
+            android:src="@drawable/icon_return"/>
+
+        <TextView
+            android:layout_alignParentBottom="true"
+            android:layout_width="match_parent"
+            android:layout_height="1px"
+            android:background="@color/titleGray"/>
+    </RelativeLayout>
+    <android.support.v7.widget.RecyclerView
+        android:id="@+id/promotion_goods"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="#e3dacd">
+
+    </android.support.v7.widget.RecyclerView>
+</LinearLayout>

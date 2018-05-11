@@ -1,0 +1,71 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="52dp"
+    android:background="@color/white"
+    android:orientation="vertical"
+    android:paddingBottom="6dp">
+
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="1px"
+        android:layout_marginStart="16dp"
+        android:background="@color/titleGray" />
+
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:gravity="center_vertical|end"
+        android:paddingEnd="16dp"
+        android:paddingStart="16dp">
+
+
+        <TextView
+            android:id="@+id/apply_after_sale"
+            android:layout_width="80dp"
+            android:layout_height="30dp"
+            android:background="@drawable/bg_text_rectangle_border_primary_2"
+            android:gravity="center"
+            android:text="@string/word_apply_after_sale"
+            android:textColor="@color/colorPrimary"
+            android:textSize="14sp" />
+
+
+        <TextView
+            android:id="@+id/to_logistics"
+            android:layout_width="80dp"
+            android:layout_height="30dp"
+            android:layout_marginStart="14dp"
+            android:background="@drawable/bg_text_rectangle_border_primary_2"
+            android:gravity="center"
+            android:text="@string/word_to_logistics"
+            android:textColor="@color/colorPrimary"
+            android:textSize="14sp" />
+
+        <TextView
+            android:id="@+id/to_sure"
+            android:layout_width="80dp"
+            android:layout_height="30dp"
+            android:layout_marginStart="14dp"
+            android:background="@drawable/bg_text_rectangle_border_primary_2"
+            android:gravity="center"
+            android:text="@string/word_sure_get_good"
+            android:textColor="@color/colorPrimary"
+            android:textSize="14sp" />
+
+        <TextView
+            android:id="@+id/to_commit"
+            android:layout_width="80dp"
+            android:layout_height="30dp"
+            android:layout_marginStart="14dp"
+            android:background="@drawable/bg_text_rectangle_border_primary_2"
+            android:gravity="center"
+            android:text="@string/word_to_commit"
+            android:textColor="@color/colorPrimary"
+            android:textSize="14sp"
+            android:visibility="gone"/>
+
+    </LinearLayout>
+</LinearLayout>

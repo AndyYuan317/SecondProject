@@ -1,0 +1,231 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/white"
+    android:orientation="vertical">
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/title_bar_height"
+        android:background="@drawable/bg_color_white">
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:gravity="center"
+            android:text="@string/app_activity_address_edit"
+            android:textColor="@color/titleBlack"
+            android:textSize="@dimen/title_bar_title_size" />
+
+        <ImageView
+            android:id="@+id/back"
+            android:layout_width="wrap_content"
+            android:layout_height="@dimen/title_bar_height"
+            android:layout_alignParentStart="true"
+            android:layout_centerInParent="true"
+            android:contentDescription="@string/word_back"
+            android:onClick="onClick"
+            android:paddingStart="16dp"
+            android:src="@drawable/icon_return" />
+
+        <TextView
+            android:id="@+id/save"
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:layout_alignParentEnd="true"
+            android:layout_centerInParent="true"
+            android:gravity="center"
+            android:onClick="onClick"
+            android:paddingEnd="16dp"
+            android:text="@string/word_save"
+            android:textColor="@color/titleBlack"
+            android:textSize="@dimen/title_bar_subtitle_size" />
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="1px"
+            android:layout_alignParentBottom="true"
+            android:background="@color/titleGray" />
+    </RelativeLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="50dp"
+        android:layout_marginEnd="16dp"
+        android:layout_marginStart="16dp"
+        android:background="@color/white"
+        android:gravity="center"
+        android:orientation="horizontal">
+
+        <ImageView
+            android:layout_width="18dp"
+            android:layout_height="18dp"
+            android:layout_marginEnd="10dp"
+            android:scaleType="fitXY"
+            android:src="@drawable/province" />
+
+        <TextView
+            android:id="@+id/address"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:background="@color/white"
+            android:gravity="center|start"
+            android:hint="@string/word_province_city_block"
+            android:lines="1"
+            android:maxLines="1"
+            android:onClick="onClick"
+            android:textColor="@color/titleBlack"
+            android:textColorHint="@color/login_hint"
+            android:textSize="14sp" />
+    </LinearLayout>
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="1px"
+        android:layout_marginEnd="16dp"
+        android:layout_marginStart="16dp"
+        android:background="@color/titleGray" />
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginEnd="16dp"
+        android:layout_marginStart="16dp"
+        android:background="@color/white"
+        android:gravity="center"
+        android:minHeight="50dp"
+        android:orientation="horizontal">
+
+        <ImageView
+            android:layout_width="18dp"
+            android:layout_height="18dp"
+            android:layout_marginEnd="10dp"
+            android:scaleType="fitXY"
+            android:src="@drawable/adress" />
+
+        <EditText
+            android:id="@+id/address_detail"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@color/white"
+            android:hint="@string/word_address_detail"
+            android:inputType="textMultiLine"
+            android:lines="3"
+            android:maxLength="500"
+            android:maxLines="3"
+            android:textColor="@color/titleBlack"
+            android:textColorHint="@color/login_hint"
+            android:textSize="14sp"
+            android:onClick="onClick"/>
+    </LinearLayout>
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="1px"
+        android:layout_marginEnd="16dp"
+        android:layout_marginStart="16dp"
+        android:background="@color/titleGray" />
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="50dp"
+        android:layout_marginEnd="16dp"
+        android:layout_marginStart="16dp"
+        android:background="@color/white"
+        android:gravity="center"
+        android:orientation="horizontal">
+
+        <ImageView
+            android:layout_width="18dp"
+            android:layout_height="18dp"
+            android:layout_marginEnd="10dp"
+            android:scaleType="fitXY"
+            android:src="@drawable/name" />
+
+        <EditText
+            android:id="@+id/name"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:background="@color/white"
+            android:hint="@string/word_name"
+            android:inputType="text"
+            android:lines="1"
+            android:maxLength="10"
+            android:maxLines="1"
+            android:ellipsize="end"
+            android:textColor="@color/titleBlack"
+            android:textColorHint="@color/login_hint"
+            android:textSize="14sp" />
+    </LinearLayout>
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="1px"
+        android:layout_marginEnd="16dp"
+        android:layout_marginStart="16dp"
+        android:background="@color/titleGray" />
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="50dp"
+        android:layout_marginEnd="16dp"
+        android:layout_marginStart="16dp"
+        android:background="@color/white"
+        android:gravity="center"
+        android:orientation="horizontal">
+
+        <ImageView
+            android:layout_width="18dp"
+            android:layout_height="18dp"
+            android:layout_marginEnd="10dp"
+            android:scaleType="fitXY"
+            android:src="@drawable/number" />
+
+        <EditText
+            android:id="@+id/phone"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:background="@color/white"
+            android:hint="@string/word_phone"
+            android:inputType="phone"
+            android:lines="1"
+            android:maxLength="11"
+            android:maxLines="1"
+            android:textColor="@color/titleBlack"
+            android:textColorHint="@color/login_hint"
+            android:textSize="14sp" />
+    </LinearLayout>
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="1px"
+        android:layout_marginEnd="16dp"
+        android:layout_marginStart="16dp"
+        android:background="@color/titleGray" />
+
+    <LinearLayout
+        android:id="@+id/set_default"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="20dp"
+        android:gravity="center"
+        android:orientation="horizontal">
+
+        <CheckBox
+            android:id="@+id/checkbox"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:clickable="false"
+            android:button="@drawable/bg_cart_checkbox" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="10dp"
+            android:text="@string/word_set_default_address"
+            android:textColor="@color/titleBlack"
+            android:textSize="16sp" />
+
+    </LinearLayout>
+</LinearLayout>

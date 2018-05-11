@@ -1,0 +1,47 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical">
+    <!--顶栏-->
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="42dp"
+        android:background="@drawable/bg_color_white">
+
+        <TextView
+            android:id="@+id/tool_text"
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:layout_centerInParent="true"
+            android:gravity="center"
+            android:text="@string/title_category"
+            android:textColor="@color/titleBlack"
+            android:textSize="@dimen/title_bar_title_size" />
+
+        <ImageView
+            android:id="@+id/category_search"
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:layout_alignParentEnd="true"
+            android:layout_centerInParent="true"
+            android:paddingEnd="16dp"
+            android:src="@drawable/icon_search" />
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="1px"
+            android:layout_alignParentBottom="true"
+            android:background="@color/titleGray" />
+    </RelativeLayout>
+    <!--分类-->
+    <android.support.v7.widget.RecyclerView
+        android:id="@+id/cate_rv"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:paddingTop="16dp"
+        android:background="@color/white"
+        android:fadingEdge="none">
+
+    </android.support.v7.widget.RecyclerView>
+</LinearLayout>

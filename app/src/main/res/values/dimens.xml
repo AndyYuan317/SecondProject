@@ -1,0 +1,35 @@
+<resources>
+    <!-- Default screen margins, per the Android Design guidelines. -->
+    <dimen name="title_bar_height">42dp</dimen>
+    <dimen name="title_bar_title_size">16sp</dimen>
+    <dimen name="title_bar_subtitle_size">14sp</dimen>
+
+
+    <dimen name="activity_horizontal_margin">16dp</dimen>
+    <dimen name="activity_vertical_margin">16dp</dimen>
+    <dimen name="fragment_home_card">14dp</dimen>
+
+    <dimen name="fragment_home_good_image_size">110dp</dimen>
+    <dimen name="fragment_home_good_name_textSize">20sp</dimen>
+    <dimen name="fragment_home_good_brief_height">20dp</dimen>
+    <dimen name="fragment_home_good_price_textSize">18sp</dimen>
+    <dimen name="fragment_home_good_price_old_textSize">14sp</dimen>
+
+    <dimen name="fragment_category_card_radius">5dp</dimen>
+
+    <dimen name="goods_detail_good_price_textSize">20sp</dimen>
+    <dimen name="popup_attr_textSize">14sp</dimen>
+
+    <dimen name="item_good_name">15sp</dimen>
+    <dimen name="item_good_des">13sp</dimen>
+    <dimen name="item_good_price">14sp</dimen>
+    <dimen name="item_good_old_price">12sp</dimen>
+    <dimen name="item_good_tag">12sp</dimen>
+    <dimen name="item_good_add">20dp</dimen>
+
+    <dimen name="item_good_add_floor">16dp</dimen>
+    <dimen name="item_good_floor_new">10sp</dimen>
+    <dimen name="item_cart_good_name">14sp</dimen>
+    <dimen name="item_cart_good_des">12sp</dimen>
+    <dimen name="item_cart_good_price">16sp</dimen>
+</resources>

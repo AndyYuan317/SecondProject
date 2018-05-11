@@ -1,0 +1,125 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:layout_margin="3dp"
+    android:id="@+id/rl_custom"
+    android:background="@color/xn_white"
+    android:descendantFocusability="blocksDescendants"
+    android:padding="6dp" >
+
+    <ImageView
+        android:id="@+id/iv_icon_demo"
+        android:layout_width="72dp"
+        android:layout_height="72dp"
+        android:scaleType="fitXY"
+        android:layout_marginTop="5dp"
+        android:layout_marginRight="6dp"
+        android:focusable="false"
+        android:background="@drawable/failed" />
+
+    <RelativeLayout
+        android:id="@+id/rl_des"
+        android:layout_width="70dp"
+        android:layout_marginTop="2dp"
+        android:layout_height="wrap_content"
+        android:layout_toRightOf="@+id/iv_icon_demo"
+        android:visibility="gone" >
+
+        <TextView
+            android:id="@+id/tv_id"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentRight="true"
+            android:layout_alignParentTop="true"
+            android:text="订单号:"
+            android:layout_margin="3dp"
+            android:textColor="#999999"
+            android:textSize="12sp" />
+
+        <TextView
+            android:id="@+id/tv_tim"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentRight="true"
+            android:layout_below="@+id/tv_num"
+            android:text="订单时间:"
+            android:layout_margin="3dp"
+            android:textColor="#999999"
+            android:textSize="12sp" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentRight="true"
+            android:layout_below="@+id/tv_tim"
+            android:text="订单价格:"
+            android:layout_marginRight="3dp"
+            android:textColor="#999999"
+            android:textSize="12sp" />
+
+        <TextView
+            android:id="@+id/tv_num"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignRight="@+id/tv_tim"
+            android:layout_below="@+id/tv_id"
+            android:text="订单商品数:"
+            android:textColor="#999999"
+            android:textSize="12sp" />
+
+    </RelativeLayout>
+    
+    <RelativeLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="2dp"
+        android:id="@+id/rl_data"
+        android:layout_toRightOf="@id/rl_des" >
+
+        <TextView
+            android:id="@+id/tv_orderid_demo"
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="6dp"
+            android:text="111"
+            android:layout_margin="3dp"
+            android:textColor="@color/xn_black"
+            android:textSize="12sp" />
+
+        <TextView
+            android:id="@+id/tv_ordernum_demo"
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/tv_orderid_demo"
+            android:layout_marginLeft="3dp"
+            android:text="311aaa1"
+            
+            android:textColor="@color/xn_black"
+            android:textSize="12sp" />
+
+        <TextView
+            android:id="@+id/tv_ordertime_demo"
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/tv_ordernum_demo"
+            android:layout_marginLeft="6dp"
+            android:text="3aaaaa"
+            android:layout_margin="3dp"
+            android:textColor="@color/xn_black"
+            android:textSize="12sp" />
+
+        <TextView
+            android:id="@+id/tv_orderprice_demo"
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/tv_ordertime_demo"
+            android:layout_marginLeft="3dp"
+            android:text="3111"
+            android:textColor="@color/xn_black"
+            android:textSize="12sp" />
+    </RelativeLayout>
+    
+
+
+</RelativeLayout>

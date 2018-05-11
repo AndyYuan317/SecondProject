@@ -1,0 +1,46 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:visibility="gone"
+    android:orientation="vertical"
+    android:layout_marginTop="10dp"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="50dp"
+        android:background="@color/white"
+        android:gravity="center">
+
+
+        <TextView
+            android:layout_width="50dp"
+            android:layout_height="1px"
+            android:background="@color/titleGray" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginEnd="10dp"
+            android:layout_marginStart="10dp"
+            android:text="组合优惠"
+            android:textSize="14sp"
+            android:textColor="@color/titleGray" />
+
+        <TextView
+            android:layout_width="50dp"
+            android:layout_height="1px"
+            android:background="@color/titleGray" />
+    </LinearLayout>
+
+    <android.support.v7.widget.RecyclerView
+        android:id="@+id/combination"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@color/white"
+        android:paddingEnd="10dp"
+        android:paddingStart="10dp">
+
+    </android.support.v7.widget.RecyclerView>
+</LinearLayout>

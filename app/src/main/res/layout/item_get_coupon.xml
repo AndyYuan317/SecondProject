@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="vertical"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:padding="0dp"
+    android:layout_margin="0dp"
+    android:layout_gravity="center">
+
+    <EditText
+        android:id="@+id/code"
+        android:layout_width="match_parent"
+        android:layout_height="32dp"
+        android:background="@drawable/bg_text_rectangle_border_primary_1"
+        android:layout_marginStart="20dp"
+        android:layout_marginEnd="20dp"
+        android:layout_marginBottom="0dp"
+        android:layout_marginTop="10dp"
+        android:lines="1"
+        android:maxLines="1"
+        android:singleLine="true"
+        android:inputType="text"
+        android:maxLength="30"
+        android:hint="请输入优惠券号码"
+        android:textColorHint="@color/titleGray"
+        android:textSize="14sp"
+        android:textColor="@color/titleBlack"
+        android:cursorVisible="true"
+        android:textCursorDrawable="@color/colorPrimary"
+        android:focusableInTouchMode="true"/>
+</LinearLayout>

@@ -1,0 +1,138 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/good_1"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:background="@color/white"
+    android:gravity="center"
+    android:onClick="onClick"
+    android:orientation="vertical">
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <com.wingplus.coomohome.component.SquareImage
+            android:id="@+id/good_img"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginEnd="16dp"
+            android:layout_marginStart="16dp"
+            android:layout_marginTop="16dp"
+            android:background="@drawable/bg_text_rectangle_border_black_r_2px"
+            android:scaleType="centerCrop"
+            android:src="@drawable/load_err_empty" />
+
+        <CheckBox
+            android:id="@+id/good_check"
+            android:layout_width="20dp"
+            android:layout_height="20dp"
+            android:layout_alignParentEnd="true"
+            android:layout_margin="20dp"
+            android:button="@drawable/bg_cart_checkbox"
+            android:visibility="gone" />
+    </RelativeLayout>
+
+    <TextView
+        android:id="@+id/good_title"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginEnd="16dp"
+        android:layout_marginStart="16dp"
+        android:layout_marginTop="10dp"
+        android:ellipsize="end"
+        android:gravity="center|start"
+        android:lines="1"
+        android:text="@string/word_good_name_Royal"
+        android:textColor="@color/titleBlack"
+        android:textSize="@dimen/item_good_name" />
+
+    <TextView
+        android:id="@+id/good_intro"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginEnd="16dp"
+        android:layout_marginStart="16dp"
+        android:layout_marginTop="4dp"
+        android:ellipsize="end"
+        android:gravity="center|start"
+        android:lines="1"
+        android:text="@string/word_hand_do"
+        android:textColor="@color/titleGray"
+        android:textSize="@dimen/item_good_des" />
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginEnd="16dp"
+        android:layout_marginStart="16dp"
+        android:layout_marginTop="6dp"
+        android:gravity="center|start"
+        android:orientation="horizontal">
+
+        <com.wingplus.coomohome.component.SpannableTextView
+            android:id="@+id/good_price"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:gravity="center|start"
+            android:text="@string/word_1799"
+            android:textColor="@color/combinationBlack"
+            android:textSize="@dimen/item_good_price" />
+
+        <com.wingplus.coomohome.component.StrikeTextView
+            android:id="@+id/good_old_price"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="10dp"
+            android:gravity="center"
+            android:text="@string/word_2999"
+            android:textColor="@color/search_old_price"
+            android:textSize="@dimen/item_good_old_price" />
+
+        <TextView
+            android:id="@+id/place"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:gravity="center_vertical|end"
+            android:text="意大利"
+            android:textColor="@color/titleGray"
+            android:textSize="12sp"
+            android:visibility="gone" />
+    </LinearLayout>
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginEnd="16dp"
+        android:layout_marginStart="16dp">
+
+        <TextView
+            android:id="@+id/good_label"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentStart="true"
+            android:layout_marginBottom="16dp"
+            android:layout_marginTop="6dp"
+            android:background="@drawable/bg_text_rectangle_border_regular"
+            android:paddingBottom="2dp"
+            android:paddingEnd="5dp"
+            android:paddingStart="5dp"
+            android:paddingTop="1dp"
+            android:text="@string/word_tag"
+            android:textColor="@color/colorPrimary"
+            android:textSize="@dimen/item_good_tag" />
+
+        <ImageView
+            android:id="@+id/good_add_cart"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentEnd="true"
+            android:paddingBottom="8dp"
+            android:paddingEnd="5dp"
+            android:paddingStart="5dp"
+            android:paddingTop="4dp"
+            android:src="@drawable/btn_add" />
+    </RelativeLayout>
+
+</LinearLayout>

@@ -1,0 +1,42 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:layout_marginStart="30dp"
+    android:paddingStart="16dp"
+    android:paddingEnd="16dp"
+    android:layout_marginTop="26dp">
+
+    <TextView
+        android:id="@+id/tx_action_divider"
+        android:layout_width="match_parent"
+        android:layout_height="1px"
+        android:visibility="gone"
+        android:background="@color/titleGray"/>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="10dp"
+        android:orientation="vertical">
+
+        <TextView
+            android:id="@+id/tx_action_time"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="2015-07-12 20:34:34"
+            android:textColor="@color/titleGray"
+            android:textSize="12sp" />
+
+
+        <TextView
+            android:id="@+id/tx_action_person"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:gravity="start"
+            android:layout_marginTop="8dp"
+            android:text="张大副"
+            android:textColor="@color/titleBlack"
+            android:textSize="12sp" />
+    </LinearLayout>
+</RelativeLayout>

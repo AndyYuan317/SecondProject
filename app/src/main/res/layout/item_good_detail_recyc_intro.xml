@@ -1,0 +1,162 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:orientation="vertical">
+    <!--介绍-->
+    <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@color/white"
+        android:orientation="vertical">
+
+        <TextView
+            android:id="@+id/good_detail_name"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="20dp"
+            android:background="@color/translate"
+            android:ellipsize="end"
+            android:maxLines="2"
+            android:paddingEnd="16dp"
+            android:paddingStart="16dp"
+            android:text="商品名称"
+            android:textColor="@color/titleBlack"
+            android:textSize="@dimen/fragment_home_good_name_textSize" />
+
+        <TextView
+            android:id="@+id/description"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="6dp"
+            android:ellipsize="end"
+            android:maxLines="1"
+            android:paddingEnd="16dp"
+            android:paddingStart="16dp"
+            android:text="商品介绍"
+            android:textColor="@color/titleGray"
+            android:textSize="14sp" />
+
+
+        <!--<LinearLayout-->
+        <!--android:layout_width="match_parent"-->
+        <!--android:layout_height="@dimen/fragment_home_good_brief_height"-->
+        <!--android:orientation="horizontal"-->
+        <!--android:paddingEnd="15dp"-->
+        <!--android:paddingStart="15dp">-->
+
+        <!--<TextView-->
+        <!--android:layout_width="wrap_content"-->
+        <!--android:layout_height="wrap_content"-->
+        <!--android:layout_marginEnd="10dp"-->
+        <!--android:background="@color/goods_label_back"-->
+        <!--android:padding="2dp"-->
+        <!--android:text="亲肤全棉"-->
+        <!--android:textColor="@color/goods_label_text"-->
+        <!--android:textSize="12sp" />-->
+
+
+        <!--</LinearLayout>-->
+
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="22dp"
+            android:layout_marginTop="14dp"
+            android:gravity="bottom|start"
+            android:orientation="horizontal">
+
+            <com.wingplus.coomohome.component.SpannableTextView
+                android:id="@+id/price"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:paddingEnd="14dp"
+                android:paddingStart="16dp"
+                android:text=""
+                android:textColor="@color/black"
+                android:textSize="@dimen/goods_detail_good_price_textSize" />
+
+            <com.wingplus.coomohome.component.StrikeTextView
+                android:id="@+id/originalPrice"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textSize="@dimen/fragment_home_good_price_old_textSize" />
+
+            <RelativeLayout
+                android:layout_weight="1"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginEnd="16dp"
+                >
+
+                <TextView
+                    android:layout_toStartOf="@+id/place"
+                    android:layout_marginEnd="5dp"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center|end"
+                    android:textSize="14sp"
+                    android:textColor="@color/titleGray"
+                    android:text="产地:" />
+
+                <TextView
+                    android:id="@+id/place"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:textColor="@color/titleBlack"
+                    android:layout_gravity="center|end"
+                    android:layout_alignParentEnd="true"
+                    android:textSize="14sp"
+                    android:text="产地"/>
+            </RelativeLayout>
+        </LinearLayout>
+    </LinearLayout>
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="1px"
+        android:layout_marginStart="16dp"
+        android:layout_marginEnd="16dp"
+        android:background="@color/titleGray"/>
+
+    <!--已选-->
+    <LinearLayout
+        android:id="@+id/chosen"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:minHeight="58dp"
+        android:background="@color/white"
+        android:gravity="center"
+        android:onClick="onClick"
+        android:orientation="horizontal"
+        android:paddingEnd="16dp"
+        android:paddingStart="16dp">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:gravity="center"
+            android:text="@string/word_chosen"
+            android:textSize="14sp" />
+
+        <TextView
+            android:id="@+id/please_chose_attr"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="15dp"
+            android:layout_weight="1"
+            android:gravity="start"
+            android:text="请选择规格，数量"
+            android:textColor="@color/titleBlack"
+            android:textSize="14sp" />
+
+        <ImageView
+            android:layout_width="16dp"
+            android:layout_height="16dp"
+            android:onClick="onClick"
+            android:src="@drawable/icon_open" />
+    </LinearLayout>
+
+
+</LinearLayout>

@@ -1,0 +1,254 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/white"
+    android:orientation="vertical">
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="42dp"
+        android:background="@drawable/bg_color_white">
+
+        <TextView
+            android:id="@+id/web_title"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_marginEnd="50dp"
+            android:layout_marginStart="50dp"
+            android:gravity="center"
+            android:text="@string/word_apply_return"
+            android:textColor="@color/titleBlack"
+            android:textSize="@dimen/title_bar_title_size" />
+
+        <ImageView
+            android:id="@+id/back"
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:layout_alignParentStart="true"
+            android:layout_centerInParent="true"
+            android:contentDescription="@string/word_back"
+            android:onClick="onClick"
+            android:paddingStart="16dp"
+            android:src="@drawable/icon_return"
+            android:visibility="visible" />
+
+        <TextView
+            android:id="@+id/push"
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:layout_alignParentEnd="true"
+            android:layout_centerInParent="true"
+            android:gravity="center"
+            android:onClick="onClick"
+            android:paddingEnd="16dp"
+            android:text="@string/word_push"
+            android:textColor="@color/titleBlack"
+            android:textSize="@dimen/title_bar_subtitle_size" />
+    </RelativeLayout>
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="34dp">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:background="@color/gray_top"
+            android:weightSum="5">
+
+            <RelativeLayout
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_weight="1"
+                android:background="@color/white">
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:layout_marginEnd="12dp"
+                    android:background="@color/color_return_apply"
+                    android:gravity="center"
+                    android:text="@string/word_push_return_apply"
+                    android:textColor="@color/colorPrimary"
+                    android:textSize="12sp" />
+
+                <ImageView
+                    android:layout_width="12dp"
+                    android:layout_height="match_parent"
+                    android:layout_alignParentEnd="true"
+                    android:scaleType="fitXY"
+                    android:src="@drawable/step_pre" />
+            </RelativeLayout>
+
+            <RelativeLayout
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_weight="1"
+                android:background="@color/white">
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:layout_marginEnd="12dp"
+                    android:background="@color/white"
+                    android:gravity="center"
+                    android:text="@string/word_custom_service"
+                    android:textColor="@color/search_tab_gray"
+                    android:textSize="12sp" />
+
+                <ImageView
+                    android:layout_width="12dp"
+                    android:layout_height="match_parent"
+                    android:layout_alignParentEnd="true"
+                    android:scaleType="fitXY"
+                    android:src="@drawable/step" />
+            </RelativeLayout>
+
+            <RelativeLayout
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_weight="1"
+                android:background="@color/white">
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:layout_marginEnd="12dp"
+                    android:background="@color/white"
+                    android:gravity="center"
+                    android:text="@string/word_logistic_choose"
+                    android:textColor="@color/search_tab_gray"
+                    android:textSize="12sp" />
+
+                <ImageView
+                    android:layout_width="12dp"
+                    android:layout_height="match_parent"
+                    android:layout_alignParentEnd="true"
+                    android:scaleType="fitXY"
+                    android:src="@drawable/step" />
+            </RelativeLayout>
+
+            <RelativeLayout
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_weight="1"
+                android:background="@color/white">
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:layout_marginEnd="12dp"
+                    android:background="@color/white"
+                    android:gravity="center"
+                    android:text="@string/word_get_good_sure"
+                    android:textColor="@color/search_tab_gray"
+                    android:textSize="12sp" />
+
+                <ImageView
+                    android:layout_width="12dp"
+                    android:layout_height="match_parent"
+                    android:layout_alignParentEnd="true"
+                    android:scaleType="fitXY"
+                    android:src="@drawable/step" />
+            </RelativeLayout>
+
+            <RelativeLayout
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_weight="1"
+                android:background="@color/white">
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:background="@color/white"
+                    android:gravity="center"
+                    android:text="@string/word_done_refunds"
+                    android:textColor="@color/search_tab_gray"
+                    android:textSize="12sp" />
+            </RelativeLayout>
+        </LinearLayout>
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="1px"
+            android:layout_alignParentBottom="true"
+            android:background="@color/line_return_apply" />
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="1px"
+            android:layout_alignParentTop="true"
+            android:background="@color/line_return_apply" />
+
+    </RelativeLayout>
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="40dp"
+                android:background="@color/search_back_grey"
+                android:gravity="center|start"
+                android:paddingEnd="16dp"
+                android:paddingStart="16dp"
+                android:text="@string/word_apply_info"
+                android:textColor="@color/titleGray"
+                android:textSize="12sp" />
+
+            <include layout="@layout/item_fragment_order_good" />
+
+            <TextView
+                android:id="@+id/return_reason_choose"
+                android:layout_width="match_parent"
+                android:layout_height="52dp"
+                android:layout_margin="16dp"
+                android:background="@drawable/bg_text_rectangle_border_graylight_2"
+                android:gravity="center|start"
+                android:paddingEnd="16dp"
+                android:paddingStart="16dp"
+                android:text="@string/word_choose_reason"
+                android:textColor="@color/titleBlack"
+                android:textSize="14sp" />
+
+
+            <EditText
+                android:id="@+id/return_reason_remark"
+                android:layout_width="match_parent"
+                android:layout_height="112dp"
+                android:layout_marginEnd="16dp"
+                android:layout_marginStart="16dp"
+                android:background="@drawable/bg_text_rectangle_border_graylight_2"
+                android:gravity="start|top"
+                android:hint="@string/word_hint_return_reason"
+                android:padding="10dp"
+                android:textColor="@color/titleBlack"
+                android:textColorHint="@color/login_social"
+                android:textSize="12sp" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="10dp"
+                android:paddingEnd="16dp"
+                android:paddingStart="16dp"
+                android:text="上传凭证（最多4张）"
+                android:textColor="@color/login_social"
+                android:textSize="12sp" />
+
+            <include layout="@layout/item_image_add" />
+
+            <include layout="@layout/item_return_contact_info" />
+
+        </LinearLayout>
+    </ScrollView>
+</LinearLayout>

@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources xmlns:android="http://schemas.android.com/tools">
+    <style name="MyDatePickerStyle" parent="@android:style/Theme.Material.Light.Dialog"  type="text/css">
+        <!--<item name="android:theme">@android:style/Theme.Holo.Light.NoActionBar</item>//修改时间选择模式为滑轮式-->
+        <item name="android:colorPrimary">@color/colorPrimary</item>
+        <item name="android:colorAccent">@color/colorPrimary</item>
+        <item name="android:colorPrimaryDark">@color/colorPrimary</item>
+    </style>
+</resources>

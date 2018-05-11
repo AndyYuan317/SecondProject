@@ -1,0 +1,184 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:focusable="true"
+    android:focusableInTouchMode="true"
+    android:orientation="vertical">
+
+    <!--顶栏-->
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/title_bar_height"
+        android:background="@drawable/bg_color_white">
+
+        <TextView
+            android:id="@+id/tool_text"
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:layout_centerInParent="true"
+            android:gravity="center"
+            android:text="@string/title_cart"
+            android:textColor="@color/titleBlack"
+            android:textSize="@dimen/title_bar_title_size" />
+
+
+        <ImageView
+            android:id="@+id/cart_back"
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:layout_alignParentStart="true"
+            android:layout_centerInParent="true"
+            android:contentDescription="@string/word_back"
+            android:onClick="onClick"
+            android:paddingStart="16dp"
+            android:src="@drawable/icon_return" />
+
+        <TextView
+            android:id="@+id/control"
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:layout_alignParentEnd="true"
+            android:layout_centerInParent="true"
+            android:gravity="center"
+            android:onClick="onClick"
+            android:paddingEnd="16dp"
+            android:text="@string/word_edit"
+            android:textColor="@color/titleBlack"
+            android:textSize="@dimen/title_bar_subtitle_size" />
+
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="1px"
+            android:layout_alignParentBottom="true"
+            android:background="@color/titleGray" />
+    </RelativeLayout>
+
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="1">
+
+        <com.wingplus.coomohome.component.MyRefreshLayout
+            android:id="@+id/tr"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            app:tr_enable_loadmore="false">
+
+            <android.support.v7.widget.RecyclerView
+                android:id="@+id/rv"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent">
+
+            </android.support.v7.widget.RecyclerView>
+        </com.wingplus.coomohome.component.MyRefreshLayout>
+
+        <LinearLayout
+            android:id="@+id/toLogin"
+            android:layout_width="match_parent"
+            android:layout_height="34dp"
+            android:background="@color/bg_logistic"
+            android:paddingStart="16dp"
+            android:paddingEnd="16dp"
+            android:gravity="center">
+
+            <TextView
+                android:id="@+id/all_order"
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_weight="1"
+                android:gravity="start|center"
+                android:text="去登录以查看购物车的内容"
+                android:textColor="@color/colorPrimary"
+                android:textSize="14sp" />
+
+            <ImageView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:background="@color/translate"
+                android:onClick="onClick"
+                android:scaleType="fitXY"
+                android:src="@drawable/icon_more" />
+
+
+        </LinearLayout>
+    </RelativeLayout>
+
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="48dp"
+        android:background="@color/white"
+        android:clickable="true"
+        android:gravity="center_vertical"
+        android:orientation="horizontal"
+        android:paddingEnd="0dp"
+        android:paddingStart="16dp">
+
+        <CheckBox
+            android:id="@+id/all_select"
+            android:layout_width="24dp"
+            android:layout_height="wrap_content"
+            android:button="@drawable/bg_cart_checkbox" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:gravity="center"
+            android:text="@string/word_all_select"
+            android:textColor="@color/titleAll"
+            android:textSize="14sp" />
+
+        <LinearLayout
+            android:id="@+id/control_order"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:visibility="visible">
+
+            <com.wingplus.coomohome.component.SpannableTextView
+                android:id="@+id/all_total"
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_weight="1"
+                android:gravity="center|end"
+                android:paddingEnd="16dp"
+                android:text="0.0"
+                android:textColor="@color/combinationBlack"
+                android:textSize="16sp" />
+
+            <TextView
+                android:id="@+id/make_order"
+                android:layout_width="120dp"
+                android:layout_height="match_parent"
+                android:background="@color/colorPrimary"
+                android:gravity="center"
+                android:text="@string/word_make_order"
+                android:textColor="@color/white"
+                android:textSize="16sp" />
+        </LinearLayout>
+
+        <RelativeLayout
+            android:id="@+id/control_delete"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:gravity="center|end"
+            android:paddingEnd="16dp"
+            android:visibility="gone">
+
+            <TextView
+                android:id="@+id/delete_cart"
+                android:layout_width="104dp"
+                android:layout_height="34dp"
+                android:background="@drawable/bg_color_primary_radius"
+                android:gravity="center"
+                android:text="@string/word_delete"
+                android:textColor="@color/white"
+                android:textSize="16sp" />
+        </RelativeLayout>
+    </LinearLayout>
+
+
+</LinearLayout>

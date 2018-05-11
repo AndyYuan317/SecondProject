@@ -1,0 +1,225 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/title_bar_height"
+        android:background="@color/white"
+        android:orientation="horizontal"
+        android:weightSum="1">
+        <!--左按钮-->
+        <ImageView
+            android:id="@+id/back"
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:layout_gravity="center"
+            android:contentDescription="@string/word_back"
+            android:onClick="onClick"
+            android:paddingStart="16dp"
+            android:src="@drawable/icon_return" />
+        <!--搜索栏-->
+        <android.support.v7.widget.CardView
+            android:id="@+id/search"
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_marginBottom="5dp"
+            android:layout_marginEnd="10dp"
+            android:layout_marginStart="10dp"
+            android:layout_marginTop="5dp"
+            android:layout_weight="1"
+            android:onClick="onClick"
+            app:cardBackgroundColor="@color/search_back_grey"
+            app:cardCornerRadius="3dp"
+            app:cardElevation="0dp">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:orientation="horizontal">
+
+                <ImageView
+                    android:layout_width="18dp"
+                    android:layout_height="18dp"
+                    android:layout_gravity="center_vertical"
+                    android:layout_marginEnd="8dp"
+                    android:layout_marginStart="6dp"
+                    android:contentDescription="@string/title_home"
+                    android:src="@drawable/navbar_icon_search" />
+
+                <TextView
+                    android:id="@+id/search_edit"
+                    android:layout_width="0dp"
+                    android:layout_height="match_parent"
+                    android:layout_weight="1"
+                    android:background="@null"
+                    android:clickable="false"
+                    android:focusable="false"
+                    android:gravity="center|start"
+                    android:textColor="@color/search_text_black"
+                    android:textSize="14sp" />
+
+            </LinearLayout>
+
+        </android.support.v7.widget.CardView>
+        <!--右按钮-->
+        <ImageView
+            android:id="@+id/cart"
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:layout_gravity="center"
+            android:contentDescription="@string/word_add_to_cart"
+            android:onClick="onClick"
+            android:paddingEnd="16dp"
+            android:src="@drawable/icon_shoppingcart" />
+    </LinearLayout>
+
+    <!--选项卡-->
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="40dp"
+        android:background="@color/titleGray"
+        android:orientation="horizontal"
+        android:paddingBottom="1px"
+        android:weightSum="3">
+
+        <LinearLayout
+            android:id="@+id/category_second"
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:background="@color/white"
+            android:gravity="center"
+            android:onClick="onClick"
+            android:orientation="horizontal">
+
+            <TextView
+                android:id="@+id/cate_chosen"
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_weight="1"
+                android:ellipsize="end"
+                android:gravity="center"
+                android:lines="1"
+                android:maxLines="1"
+                android:paddingStart="5dp"
+                android:text="全部分类"
+                android:textColor="@color/search_tab_gray"
+                android:textSize="14sp" />
+
+            <ImageView
+                android:layout_width="25dp"
+                android:layout_height="match_parent"
+                android:src="@drawable/tab_icon_open_pre" />
+        </LinearLayout>
+
+        <LinearLayout
+            android:id="@+id/sort"
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:background="@color/white"
+            android:gravity="center"
+            android:onClick="onClick"
+            android:orientation="horizontal">
+
+            <TextView
+                android:id="@+id/sort_chosen"
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_weight="1"
+                android:ellipsize="end"
+                android:gravity="center"
+                android:lines="1"
+                android:maxLines="1"
+                android:paddingStart="5dp"
+                android:text="默认排序"
+                android:textColor="@color/search_tab_gray"
+                android:textSize="14sp" />
+
+            <ImageView
+                android:layout_width="25dp"
+                android:layout_height="match_parent"
+                android:src="@drawable/tab_icon_open_pre" />
+        </LinearLayout>
+
+        <LinearLayout
+            android:id="@+id/filter"
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:background="@color/white"
+            android:gravity="center"
+            android:onClick="onClick"
+            android:orientation="horizontal">
+
+            <ImageView
+                android:layout_width="20dp"
+                android:layout_height="20dp"
+                android:src="@drawable/tab_icon_screen" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:gravity="center"
+                android:text="筛选"
+                android:textColor="@color/search_tab_gray"
+                android:textSize="14sp" />
+
+
+        </LinearLayout>
+
+    </LinearLayout>
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <ImageView
+            android:id="@+id/empty"
+            android:layout_width="220dp"
+            android:layout_height="220dp"
+            android:layout_centerHorizontal="true"
+            android:layout_marginTop="120dp"
+            android:scaleType="fitXY"
+            android:src="@drawable/search_empty" />
+
+        <com.wingplus.coomohome.component.MyRefreshLayout
+            android:id="@+id/tr"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+            <!--商品-->
+            <android.support.v7.widget.RecyclerView
+                android:id="@+id/search_result_goods"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:overScrollMode="never">
+
+            </android.support.v7.widget.RecyclerView>
+        </com.wingplus.coomohome.component.MyRefreshLayout>
+
+        <!--选项-->
+        <RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+            android:id="@+id/chose_back"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:background="@color/tran_gray"
+            android:gravity="top"
+            android:onClick="onClick"
+            android:orientation="vertical">
+
+            <android.support.v7.widget.RecyclerView
+                android:id="@+id/chose_content"
+                android:layout_width="match_parent"
+                android:layout_height="300dp"
+                android:background="@color/white">
+
+            </android.support.v7.widget.RecyclerView>
+
+
+        </RelativeLayout>
+    </RelativeLayout>
+</LinearLayout>

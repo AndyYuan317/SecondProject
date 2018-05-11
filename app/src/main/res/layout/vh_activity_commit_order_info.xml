@@ -1,0 +1,117 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:orientation="vertical">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="50dp"
+        android:background="@color/white"
+        android:gravity="center|end"
+        android:orientation="horizontal"
+        android:paddingEnd="16dp">
+
+        <CheckBox
+            android:id="@+id/anonymous"
+            android:layout_width="20dp"
+            android:layout_height="20dp"
+            android:button="@drawable/bg_cart_checkbox" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="8dp"
+            android:text="匿名"
+            android:textColor="@color/titleBlack"
+            android:textSize="14sp" />
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@color/white"
+            android:gravity="center|start"
+            android:orientation="horizontal"
+            android:paddingBottom="12dp"
+            android:paddingStart="16dp"
+            android:paddingTop="12dp">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="描述相符"
+                android:textColor="@color/titleBlack"
+                android:textSize="14sp" />
+
+            <com.wingplus.coomohome.component.MyRatingStar
+                android:id="@+id/good_des_star"
+                android:layout_width="wrap_content"
+                android:layout_height="26dp"
+                android:layout_marginStart="18dp"
+                android:gravity="center"
+                app:star_size="20dp" />
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@color/white"
+            android:gravity="center|start"
+            android:orientation="horizontal"
+            android:paddingBottom="12dp"
+            android:paddingStart="16dp"
+            android:paddingTop="12dp">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="服务态度"
+                android:textColor="@color/titleBlack"
+                android:textSize="14sp" />
+
+            <com.wingplus.coomohome.component.MyRatingStar
+                android:id="@+id/good_ser_star"
+                android:layout_width="wrap_content"
+                android:layout_height="26dp"
+                android:layout_marginStart="18dp"
+                android:gravity="center"
+                app:star_size="20dp" />
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@color/white"
+            android:gravity="center|start"
+            android:orientation="horizontal"
+            android:paddingBottom="12dp"
+            android:paddingStart="16dp"
+            android:paddingTop="12dp">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="物流速度"
+                android:textColor="@color/titleBlack"
+                android:textSize="14sp" />
+
+            <com.wingplus.coomohome.component.MyRatingStar
+                android:id="@+id/good_logi_star"
+                android:layout_width="wrap_content"
+                android:layout_height="26dp"
+                android:layout_marginStart="18dp"
+                android:gravity="center"
+                app:star_size="20dp" />
+
+        </LinearLayout>
+    </LinearLayout>
+</LinearLayout>

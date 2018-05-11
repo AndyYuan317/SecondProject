@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="utf-8"?><!--轮播图-->
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="220dp">
+
+    <com.wingplus.coomohome.component.AutoScrollViewPager
+        android:id="@+id/home_banner"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+    </com.wingplus.coomohome.component.AutoScrollViewPager>
+
+    <com.wingplus.coomohome.component.CirclePageIndicator
+        android:id="@+id/home_banner_indicator"
+        android:layout_width="wrap_content"
+        android:layout_height="20dp"
+        android:layout_gravity="center|bottom"
+        android:layout_marginBottom="10dp"
+        android:padding="5dp"
+        app:centered="false"
+        app:fillColor="@color/white"
+        app:paddingStart="10dp"
+        app:pageColor="#33444444"
+        app:radius="4dp"
+        app:strokeWidth="0dp" />
+</FrameLayout>

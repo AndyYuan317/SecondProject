@@ -1,0 +1,80 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:background="@color/white"
+    android:orientation="vertical">
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="40dp"
+        android:background="@color/search_back_grey"
+        android:gravity="center|start"
+        android:paddingEnd="16dp"
+        android:paddingStart="16dp"
+        android:text="@string/word_apply_info"
+        android:textColor="@color/titleGray"
+        android:textSize="12sp" />
+
+    <LinearLayout
+        android:id="@+id/goods_content"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical">
+
+        <include layout="@layout/item_fragment_order_good" />
+
+    </LinearLayout>
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="20dp"
+        android:paddingEnd="16dp"
+        android:paddingStart="16dp"
+        android:text="@string/word_return_reason"
+        android:textColor="@color/titleGray"
+        android:textSize="12sp" />
+
+    <TextView
+        android:id="@+id/reason_choose"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="14dp"
+        android:paddingEnd="16dp"
+        android:paddingStart="16dp"
+        android:text="商品破损"
+        android:textColor="@color/titleBlack"
+        android:textSize="14sp" />
+
+    <TextView
+        android:id="@+id/reason_remark"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="10dp"
+        android:lineSpacingExtra="5dp"
+        android:paddingEnd="16dp"
+        android:paddingStart="16dp"
+        android:text="@string/word_return_reason"
+        android:textColor="@color/titleGray"
+        android:textSize="12sp" />
+
+
+    <com.wingplus.coomohome.component.GridViewMeasure
+        android:id="@+id/img_content"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="10dp"
+        android:columnWidth="75dp"
+        android:horizontalSpacing="6dp"
+        android:numColumns="auto_fit"
+        android:paddingEnd="16dp"
+        android:paddingStart="16dp"
+        android:paddingBottom="16dp"
+        android:scrollbars="none"
+        android:stretchMode="none"
+        android:verticalSpacing="10dp">
+
+    </com.wingplus.coomohome.component.GridViewMeasure>
+
+</LinearLayout>

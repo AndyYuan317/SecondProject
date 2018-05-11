@@ -1,0 +1,37 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:background="@color/white"
+    android:orientation="horizontal"
+    android:padding="16dp">
+
+    <HorizontalScrollView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <LinearLayout
+            android:orientation="horizontal"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:gravity="center|start">
+
+            <LinearLayout
+                android:id="@+id/comment_img_content"
+                android:layout_width="wrap_content"
+                android:layout_height="76dp"
+                android:gravity="center|start"
+                android:orientation="horizontal">
+
+            </LinearLayout>
+
+            <ImageView
+                android:id="@+id/add_btn"
+                android:layout_width="76dp"
+                android:layout_height="76dp"
+                android:layout_marginStart="10dp"
+                android:contentDescription="add"
+                android:src="@drawable/add_img" />
+        </LinearLayout>
+    </HorizontalScrollView>
+</LinearLayout>

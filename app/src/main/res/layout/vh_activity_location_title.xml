@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="40dp"
+    android:orientation="vertical">
+
+    <TextView
+        android:id="@+id/title"
+        android:layout_width="match_parent"
+        android:layout_height="39dp"
+        android:background="@color/location_search_back"
+        android:gravity="center|start"
+        android:paddingStart="16dp"
+        android:text="我的收货地址"
+        android:textColor="@color/titleGrey"
+        android:textSize="14sp" />
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="1px"
+        android:background="@color/titleGray"/>
+
+</LinearLayout>

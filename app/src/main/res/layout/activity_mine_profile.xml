@@ -1,0 +1,406 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical">
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/title_bar_height"
+        android:background="@drawable/bg_color_white">
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:gravity="center"
+            android:text="@string/word_mine_profile"
+            android:textColor="@color/black"
+            android:textSize="@dimen/title_bar_title_size" />
+
+        <ImageView
+            android:id="@+id/back"
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:layout_alignParentStart="true"
+            android:layout_centerInParent="true"
+            android:contentDescription="@string/word_back"
+            android:onClick="onClick"
+            android:paddingStart="16dp"
+            android:src="@drawable/icon_return" />
+
+        <TextView
+            android:id="@+id/save"
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:layout_alignParentEnd="true"
+            android:layout_centerInParent="true"
+            android:gravity="center"
+            android:onClick="onClick"
+            android:paddingEnd="16dp"
+            android:text="@string/word_edit"
+            android:textColor="@color/titleBlack"
+            android:textSize="@dimen/title_bar_subtitle_size" />
+
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="1px"
+            android:layout_alignParentBottom="true"
+            android:background="@color/titleGray" />
+    </RelativeLayout>
+
+
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="vertical">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="@color/white"
+                android:orientation="vertical">
+
+                <android.support.v7.widget.CardView
+                    android:id="@+id/profile_img"
+                    android:layout_width="80dp"
+                    android:layout_height="80dp"
+                    android:layout_gravity="center"
+                    android:layout_marginTop="30dp"
+                    app:cardCornerRadius="40dp">
+
+                    <ImageView
+                        android:id="@+id/img"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:onClick="onClick"
+                        android:src="@drawable/icon_unregisteredavatar" />
+                </android.support.v7.widget.CardView>
+
+                <TextView
+                    android:id="@+id/modify_headImg"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center"
+                    android:layout_marginBottom="30dp"
+                    android:layout_marginTop="16dp"
+                    android:onClick="onClick"
+                    android:text="@string/word_modify_headimage"
+                    android:textColor="@color/titleGray"
+                    android:textSize="14sp" />
+            </LinearLayout>
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="40dp"
+
+                android:background="@color/search_back_grey"
+                android:gravity="center|start"
+                android:paddingEnd="16dp"
+                android:paddingStart="16dp"
+                android:text="基本信息"
+                android:textColor="@color/titleBlack"
+                android:textSize="14sp" />
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="52dp"
+                android:background="@color/white"
+                android:gravity="center"
+                android:orientation="horizontal"
+                android:paddingStart="16dp">
+
+                <TextView
+                    android:id="@+id/lable_id"
+                    android:layout_width="84dp"
+                    android:layout_height="match_parent"
+                    android:gravity="center|start"
+                    android:text="ID"
+                    android:textColor="@color/titleGrey"
+                    android:textSize="14sp" />
+
+                <TextView
+                    android:id="@+id/id"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:layout_toEndOf="@id/lable_id"
+                    android:background="@color/white"
+                    android:gravity="center|start"
+                    android:textColor="@color/titleBlack"
+                    android:textColorHint="@color/login_hint"
+                    android:textSize="14sp" />
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="1px"
+                    android:layout_alignParentBottom="true"
+                    android:background="@color/titleGray" />
+            </RelativeLayout>
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="52dp"
+                android:background="@color/white"
+                android:gravity="center"
+                android:orientation="horizontal"
+                android:paddingStart="16dp">
+
+                <TextView
+                    android:id="@+id/lable_account"
+                    android:layout_width="84dp"
+                    android:layout_height="match_parent"
+                    android:gravity="center|start"
+                    android:text="@string/word_account"
+                    android:textColor="@color/titleGrey"
+                    android:textSize="14sp" />
+
+                <TextView
+                    android:id="@+id/account"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:layout_toEndOf="@id/lable_account"
+                    android:background="@color/white"
+                    android:gravity="center|start"
+                    android:textColor="@color/titleBlack"
+                    android:textColorHint="@color/login_hint"
+                    android:textSize="14sp" />
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="1px"
+                    android:layout_alignParentBottom="true"
+                    android:background="@color/titleGray" />
+            </RelativeLayout>
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="52dp"
+                android:background="@color/white"
+                android:gravity="center"
+                android:orientation="horizontal"
+                android:paddingStart="16dp">
+
+                <TextView
+                    android:id="@+id/lable_name"
+                    android:layout_width="84dp"
+                    android:layout_height="match_parent"
+                    android:gravity="center|start"
+                    android:text="@string/word_ni_cheng"
+                    android:textColor="@color/titleGrey"
+                    android:textSize="14sp" />
+
+                <EditText
+                    android:id="@+id/name"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:layout_toEndOf="@id/lable_name"
+                    android:background="@color/white"
+                    android:focusable="false"
+                    android:hint="@string/word_ni_cheng"
+                    android:inputType="text"
+                    android:lines="1"
+                    android:maxLength="10"
+                    android:maxLines="1"
+                    android:onClick="onClick"
+                    android:text="COOFUN"
+                    android:textColor="@color/titleBlack"
+                    android:textColorHint="@color/login_hint"
+                    android:textSize="14sp" />
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="1px"
+                    android:layout_alignParentBottom="true"
+                    android:background="@color/titleGray" />
+            </RelativeLayout>
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="52dp"
+                android:background="@color/white"
+                android:gravity="center"
+                android:orientation="horizontal"
+                android:paddingStart="16dp">
+
+                <TextView
+                    android:id="@+id/lable_sex"
+                    android:layout_width="84dp"
+                    android:layout_height="match_parent"
+                    android:gravity="center|start"
+                    android:text="@string/word_sex"
+                    android:textColor="@color/titleGrey"
+                    android:textSize="14sp" />
+
+                <TextView
+                    android:id="@+id/sex"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:layout_toEndOf="@id/lable_sex"
+                    android:background="@color/white"
+                    android:gravity="center|start"
+                    android:onClick="onClick"
+                    android:text="女"
+                    android:textColor="@color/titleBlack"
+                    android:textSize="14sp" />
+
+                <ImageView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentEnd="true"
+                    android:layout_centerVertical="true"
+                    android:layout_marginEnd="16dp"
+                    android:background="@color/translate"
+                    android:scaleType="fitXY"
+                    android:src="@drawable/icon_more" />
+
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="1px"
+                    android:layout_alignParentBottom="true"
+                    android:background="@color/titleGray" />
+            </RelativeLayout>
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="52dp"
+                android:background="@color/white"
+                android:gravity="center"
+                android:orientation="horizontal"
+                android:paddingStart="16dp">
+
+                <TextView
+                    android:id="@+id/lable_birthday"
+                    android:layout_width="84dp"
+                    android:layout_height="match_parent"
+                    android:gravity="center|start"
+                    android:text="生日"
+                    android:textColor="@color/titleGrey"
+                    android:textSize="14sp" />
+
+                <TextView
+                    android:id="@+id/birthday"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:layout_toEndOf="@id/lable_birthday"
+                    android:background="@color/white"
+                    android:gravity="center|start"
+                    android:onClick="onClick"
+                    android:text="1995-05-05"
+                    android:textColor="@color/titleBlack"
+                    android:textSize="14sp" />
+
+                <ImageView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentEnd="true"
+                    android:layout_centerVertical="true"
+                    android:layout_marginEnd="16dp"
+                    android:background="@color/translate"
+                    android:scaleType="fitXY"
+                    android:src="@drawable/icon_more" />
+            </RelativeLayout>
+
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="40dp"
+
+                android:background="@color/search_back_grey"
+                android:gravity="center|start"
+                android:paddingEnd="16dp"
+                android:paddingStart="16dp"
+                android:text="账号绑定"
+                android:textColor="@color/titleBlack"
+                android:textSize="14sp" />
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="52dp"
+                android:background="@color/white"
+                android:gravity="center"
+                android:orientation="horizontal"
+                android:paddingStart="16dp">
+
+                <TextView
+                    android:id="@+id/lable_phone"
+                    android:layout_width="84dp"
+                    android:layout_height="match_parent"
+                    android:gravity="center|start"
+                    android:text="手机"
+                    android:textColor="@color/titleGrey"
+                    android:textSize="14sp" />
+
+                <TextView
+                    android:id="@+id/phone"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:layout_toEndOf="@id/lable_phone"
+                    android:background="@color/white"
+                    android:gravity="center|start"
+                    android:textColor="@color/titleBlack"
+                    android:textColorHint="@color/login_hint"
+                    android:textSize="14sp" />
+
+                <TextView
+                    android:id="@+id/phone_bind"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginEnd="16dp"
+                    android:background="@drawable/bg_text_rectangle_border_primary_3"
+                    android:layout_alignParentEnd="true"
+                    android:layout_centerVertical="true"
+                    android:textColor="@color/colorPrimary"
+                    android:textColorHint="@color/login_hint"
+                    android:textSize="14sp"
+                    android:text="去绑定"/>
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="1px"
+                    android:layout_alignParentBottom="true"
+                    android:background="@color/titleGray" />
+            </RelativeLayout>
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="52dp"
+                android:background="@color/white"
+                android:gravity="center"
+                android:orientation="horizontal"
+                android:paddingStart="16dp"
+                android:layout_marginBottom="30dp">
+
+                <TextView
+                    android:id="@+id/lable_wx"
+                    android:layout_width="84dp"
+                    android:layout_height="match_parent"
+                    android:gravity="center|start"
+                    android:text="微信"
+                    android:textColor="@color/titleGrey"
+                    android:textSize="14sp" />
+
+
+                <TextView
+                    android:id="@+id/wx_bind"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginEnd="16dp"
+                    android:background="@drawable/bg_text_rectangle_border_primary_3"
+                    android:layout_alignParentEnd="true"
+                    android:layout_centerVertical="true"
+                    android:textColor="@color/colorPrimary"
+                    android:textColorHint="@color/login_hint"
+                    android:textSize="14sp"
+                    android:text="去绑定"/>
+            </RelativeLayout>
+        </LinearLayout>
+    </ScrollView>
+
+</LinearLayout>

@@ -1,0 +1,82 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical">
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/title_bar_height"
+        android:background="@drawable/bg_color_white">
+
+        <TextView
+            android:id="@+id/web_title"
+            android:layout_marginStart="50dp"
+            android:layout_marginEnd="50dp"
+            android:maxLines="1"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:gravity="center"
+            android:text="品牌故事"
+            android:textColor="@color/titleBlack"
+            android:textSize="@dimen/title_bar_title_size" />
+
+        <ImageView
+            android:id="@+id/back"
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:layout_alignParentStart="true"
+            android:layout_centerInParent="true"
+            android:contentDescription="@string/word_back"
+            android:onClick="onClick"
+            android:paddingStart="16dp"
+            android:src="@drawable/icon_return" />
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="1px"
+            android:layout_alignParentBottom="true"
+            android:background="@color/gray" />
+    </RelativeLayout>
+
+    <LinearLayout
+        android:id="@+id/web_content"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="1"
+        android:orientation="vertical">
+
+        <com.just.library.AgentWebView
+            xmlns:android="http://schemas.android.com/apk/res/android"
+            android:id="@+id/img"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+
+        </com.just.library.AgentWebView>
+
+    </LinearLayout>
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="1px"
+        android:background="@color/gray"/>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="50dp"
+        android:gravity="end"
+        android:paddingEnd="15dp"
+        android:orientation="horizontal">
+        <TextView
+            android:id="@+id/good_detail"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_vertical"
+            android:padding="6dp"
+            android:onClick="onClick"
+            android:text="点击购买"
+            android:textColor="@color/white"
+            android:textSize="14sp"
+            android:background="@color/colorPrimary"/>
+    </LinearLayout>
+</LinearLayout>

@@ -1,0 +1,137 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:id="@+id/good_1"
+    android:layout_width="122dp"
+    android:layout_height="wrap_content"
+    android:background="@color/white"
+    android:gravity="center"
+    android:onClick="onClick"
+    android:orientation="vertical"
+    android:paddingBottom="24dp"
+    android:paddingEnd="12dp">
+
+    <RelativeLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content">
+
+        <ImageView
+            android:id="@+id/good_img"
+            android:layout_width="@dimen/fragment_home_good_image_size"
+            android:layout_height="@dimen/fragment_home_good_image_size"
+            android:scaleType="centerCrop"
+            android:src="@drawable/load_err_empty" />
+
+        <TextView
+            android:id="@+id/new_good"
+            android:layout_width="30dp"
+            android:layout_height="wrap_content"
+            android:layout_margin="4dp"
+            android:background="@drawable/bg_text_rectangle_border_primary_1"
+            android:gravity="center"
+            android:paddingBottom="1dp"
+            android:paddingTop="1dp"
+            android:text="@string/word_new_good"
+            android:textColor="@color/colorPrimary"
+            android:textSize="@dimen/item_good_floor_new"
+            android:visibility="gone" />
+    </RelativeLayout>
+
+    <TextView
+        android:id="@+id/good_title"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="12dp"
+        android:ellipsize="end"
+        android:gravity="center|start"
+        android:lines="1"
+        android:maxLines="1"
+        android:text="@string/word_good_name_smeg"
+        android:textColor="@color/titleBlack"
+        android:textSize="@dimen/item_good_name" />
+
+    <TextView
+        android:id="@+id/good_intro"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="6dp"
+        android:gravity="start"
+        android:lines="1"
+        android:text="@string/word_7_control"
+        android:textColor="@color/titleGray"
+        android:textSize="@dimen/item_good_des" />
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="10dp"
+        android:orientation="horizontal">
+
+        <com.wingplus.coomohome.component.SpannableTextView
+            android:id="@+id/good_price"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:gravity="center|start"
+            android:text="@string/word_1799"
+            android:textColor="@color/black"
+            android:textSize="@dimen/item_good_price" />
+
+        <com.wingplus.coomohome.component.StrikeTextView
+            android:id="@+id/good_old_price"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:gravity="center|start"
+            android:paddingStart="10dp"
+            android:text="@string/word_2999"
+            android:textColor="@color/search_old_price"
+            android:textSize="@dimen/item_good_old_price" />
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:gravity="bottom|start"
+        android:orientation="horizontal">
+
+        <RelativeLayout
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1">
+
+
+            <TextView
+                android:id="@+id/good_label"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:background="@drawable/bg_text_rectangle_border_primary_8"
+                android:ellipsize="end"
+                android:gravity="center"
+                android:lines="1"
+                android:maxLines="1"
+                android:paddingBottom="1dp"
+                android:paddingEnd="5dp"
+                android:paddingStart="5dp"
+                android:paddingTop="1dp"
+                android:text="@string/word_tag"
+                android:textColor="@color/colorPrimary"
+                android:textSize="@dimen/item_good_tag" />
+        </RelativeLayout>
+
+        <RelativeLayout
+            android:id="@+id/good_add_cart"
+            android:layout_width="26dp"
+            android:layout_height="26dp"
+            android:gravity="bottom|center_horizontal">
+
+            <ImageView
+                android:layout_width="@dimen/item_good_add_floor"
+                android:layout_height="@dimen/item_good_add_floor"
+                android:background="@drawable/home_icon_add"
+                android:gravity="center" />
+
+        </RelativeLayout>
+
+    </LinearLayout>
+
+</LinearLayout>

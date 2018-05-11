@@ -1,0 +1,139 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:id="@+id/back"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#98111111"
+    android:gravity="center"
+    android:onClick="onClick"
+    android:orientation="vertical">
+
+    <android.support.v7.widget.CardView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_margin="30dp"
+        android:background="@color/translate"
+        app:cardCornerRadius="2dp">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:layout_margin="6dp"
+            android:background="@color/translate">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="52dp"
+                android:background="@color/white"
+                android:gravity="center"
+                android:orientation="horizontal"
+                android:paddingEnd="16dp"
+                android:paddingStart="16dp">
+
+                <ImageView
+                    android:layout_width="18dp"
+                    android:layout_height="18dp"
+                    android:layout_marginEnd="2dp"
+                    android:scaleType="fitXY"
+                    android:src="@drawable/icon_phone" />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="match_parent"
+                    android:layout_marginEnd="20dp"
+                    android:gravity="center"
+                    android:text="@string/word_phone"
+                    android:textColor="@color/titleGrey"
+                    android:textSize="14sp" />
+
+                <EditText
+                    android:id="@+id/phone"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:background="@color/white"
+                    android:hint="@string/word_please_input_phone"
+                    android:inputType="phone"
+                    android:lines="1"
+                    android:maxLength="11"
+                    android:maxLines="1"
+                    android:textColorHint="@color/login_hint"
+                    android:textSize="14sp" />
+            </LinearLayout>
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="1px"
+                android:layout_marginEnd="16dp"
+                android:layout_marginStart="16dp"
+                android:background="@color/titleGray" />
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="52dp"
+                android:background="@color/white"
+                android:gravity="center"
+                android:orientation="horizontal"
+                android:paddingEnd="16dp"
+                android:paddingStart="16dp">
+
+                <ImageView
+                    android:layout_width="18dp"
+                    android:layout_height="18dp"
+                    android:layout_marginEnd="2dp"
+                    android:scaleType="fitXY"
+                    android:src="@drawable/icon_verificationcode" />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="match_parent"
+                    android:layout_marginEnd="20dp"
+                    android:gravity="center"
+                    android:text="@string/word_verification_code"
+                    android:textColor="@color/titleGrey"
+                    android:textSize="14sp" />
+
+                <EditText
+                    android:id="@+id/verification"
+                    android:layout_width="0dp"
+                    android:layout_height="match_parent"
+                    android:layout_weight="1"
+                    android:background="@color/white"
+                    android:hint="@string/word_please_input_verification_code"
+                    android:lines="1"
+                    android:maxLength="6"
+                    android:maxLines="1"
+                    android:textColorHint="@color/login_hint"
+                    android:textSize="14sp" />
+
+                <TextView
+                    android:id="@+id/get_verification"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:background="@drawable/bg_text_rectangle_border_primary_3"
+                    android:gravity="center"
+                    android:onClick="onClick"
+                    android:padding="5dp"
+                    android:text="@string/word_get_verification_code"
+                    android:textColor="@color/colorPrimary"
+                    android:textSize="14sp" />
+            </LinearLayout>
+        </LinearLayout>
+    </android.support.v7.widget.CardView>
+
+    <TextView
+        android:id="@+id/bind"
+        android:layout_width="match_parent"
+        android:layout_height="52dp"
+        android:layout_marginEnd="30dp"
+        android:layout_marginStart="30dp"
+        android:layout_marginTop="20dp"
+        android:background="@drawable/bg_color_primary_radius"
+        android:gravity="center"
+        android:onClick="onClick"
+        android:text="绑定手机"
+        android:textColor="@color/white"
+        android:textSize="16sp" />
+
+</LinearLayout>

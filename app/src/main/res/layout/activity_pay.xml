@@ -1,0 +1,204 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical">
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/title_bar_height"
+        android:background="@drawable/bg_color_white">
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:gravity="center"
+            android:text="@string/word_pay"
+            android:textColor="@color/titleBlack"
+            android:textSize="@dimen/title_bar_title_size" />
+
+        <ImageView
+            android:id="@+id/back"
+            android:layout_width="wrap_content"
+            android:layout_height="46dp"
+            android:layout_alignParentStart="true"
+            android:layout_centerInParent="true"
+            android:contentDescription="@string/word_back"
+            android:onClick="onClick"
+            android:paddingStart="16dp"
+            android:src="@drawable/icon_return" />
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="1px"
+            android:layout_alignParentBottom="true"
+            android:background="@color/titleGray" />
+    </RelativeLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="88dp"
+        android:background="@color/white"
+        android:gravity="center"
+        android:orientation="horizontal">
+
+        <ImageView
+            android:layout_width="40dp"
+            android:layout_height="40dp"
+            android:scaleType="fitXY"
+            android:src="@drawable/right" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="16dp"
+            android:text="下单成功！"
+            android:textColor="@color/combinationBlack"
+            android:textSize="16sp" />
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="10dp"
+        android:background="@color/white"
+        android:orientation="vertical"
+        android:paddingEnd="0dp"
+        android:paddingStart="16dp">
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="14dp"
+            android:layout_marginTop="18dp"
+            android:text="@string/word_chose_payment"
+            android:textColor="@color/titleGrey"
+            android:textSize="14sp" />
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="1px"
+            android:background="@color/titleGray" />
+
+        <LinearLayout
+            android:id="@+id/wx_ll"
+            android:layout_width="match_parent"
+            android:layout_height="58dp"
+            android:onClick="onClick">
+
+            <ImageView
+                android:layout_width="22dp"
+                android:layout_height="22dp"
+                android:layout_gravity="center"
+                android:layout_marginEnd="20dp"
+                android:src="@drawable/weixin" />
+
+            <TextView
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:layout_weight="1"
+                android:text="@string/word_weixin_pay"
+                android:textColor="@color/titleBlack"
+                android:textSize="14sp" />
+
+            <CheckBox
+                android:id="@+id/wx_pay"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:layout_marginEnd="16dp"
+                android:button="@drawable/bg_cart_checkbox"
+                android:clickable="false" />
+        </LinearLayout>
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="1px"
+            android:background="@color/titleGray" />
+
+        <LinearLayout
+            android:id="@+id/zfb_ll"
+            android:layout_width="match_parent"
+            android:layout_height="58dp"
+            android:onClick="onClick">
+
+            <ImageView
+                android:layout_width="22dp"
+                android:layout_height="22dp"
+                android:layout_gravity="center"
+                android:layout_marginEnd="20dp"
+                android:src="@drawable/zhifubao" />
+
+            <TextView
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:layout_weight="1"
+                android:text="@string/word_zhifubao_pay"
+                android:textColor="@color/titleBlack"
+                android:textSize="14sp" />
+
+            <CheckBox
+                android:id="@+id/zfb_pay"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:layout_marginEnd="16dp"
+                android:button="@drawable/bg_cart_checkbox"
+                android:clickable="false" />
+        </LinearLayout>
+
+        <!--<TextView-->
+            <!--android:layout_width="match_parent"-->
+            <!--android:layout_height="1px"-->
+            <!--android:background="@color/titleGray" />-->
+
+        <!--<LinearLayout-->
+            <!--android:id="@+id/card_ll"-->
+            <!--android:layout_width="match_parent"-->
+            <!--android:layout_height="58dp"-->
+            <!--android:onClick="onClick">-->
+
+            <!--<ImageView-->
+                <!--android:id="@+id/imageView3"-->
+                <!--android:layout_width="22dp"-->
+                <!--android:layout_height="22dp"-->
+                <!--android:layout_gravity="center"-->
+                <!--android:layout_marginEnd="20dp"-->
+                <!--android:src="@drawable/card" />-->
+
+            <!--<TextView-->
+                <!--android:layout_width="0dp"-->
+                <!--android:layout_height="wrap_content"-->
+                <!--android:layout_gravity="center"-->
+                <!--android:layout_weight="1"-->
+                <!--android:text="@string/word_bank_card_pay"-->
+                <!--android:textColor="@color/titleBlack"-->
+                <!--android:textSize="14sp" />-->
+
+            <!--<CheckBox-->
+                <!--android:id="@+id/card_pay"-->
+                <!--android:layout_width="wrap_content"-->
+                <!--android:layout_height="wrap_content"-->
+                <!--android:layout_gravity="center"-->
+                <!--android:layout_marginEnd="16dp"-->
+                <!--android:button="@drawable/bg_cart_checkbox"-->
+                <!--android:clickable="false" />-->
+        <!--</LinearLayout>-->
+    </LinearLayout>
+
+    <TextView
+        android:id="@+id/to_pay"
+        android:layout_width="match_parent"
+        android:layout_height="40dp"
+        android:layout_marginEnd="16dp"
+        android:layout_marginStart="14dp"
+        android:layout_marginTop="30dp"
+        android:background="@drawable/bg_color_primary_radius"
+        android:gravity="center"
+        android:onClick="onClick"
+        android:text="@string/word_to_pay"
+        android:textColor="@color/white"
+        android:textSize="14sp" />
+</LinearLayout>

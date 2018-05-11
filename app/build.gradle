@@ -1,0 +1,230 @@
+apply plugin: 'com.android.application'
+
+
+static def releaseTime() {
+    return new Date().format("yyyy-MM-dd", TimeZone.getTimeZone("UTC"))
+}
+
+static def gitVersionCode() {
+    def cmd = 'git rev-list HEAD --count'
+    cmd.execute().text.trim().toInteger()
+}
+
+static def gitVersionTag() {
+    def cmd = 'git describe --tags'
+    def version = cmd.execute().text.trim()
+
+    def pattern = "-(\\d+)-g"
+    def matcher = version =~ pattern
+
+    if (matcher) {
+        version = version.substring(0, matcher.start()) + "." + matcher[0][1]
+    } else {
+        version = version + ".0"
+    }
+
+    return version
+}
+
+
+android {
+    compileSdkVersion 26
+    buildToolsVersion "26.0.1"
+    signingConfigs {
+        debug {
+            keyAlias 'leafben'
+            keyPassword 'leafben1813090363'
+            storeFile file('../debug.jks')
+            storePassword 'leafben1813090363'
+            v1SigningEnabled true
+            v2SigningEnabled true
+        }
+        release {
+            keyAlias 'coomohome'
+            keyPassword 'kmj20170606'
+            storeFile file('../release.jks')
+            storePassword 'kmj20170606'
+            v1SigningEnabled true
+            v2SigningEnabled true
+        }
+    }
+
+    defaultConfig {
+        applicationId "com.wingplus.coomohome"
+        minSdkVersion 19
+        targetSdkVersion 26
+        versionCode 6
+        versionName "1.1.5"
+        testInstrumentationRunner "android.support.test.runner.AndroidJUnitRunner"
+        signingConfig signingConfigs.debug
+        ndk {
+            abiFilters 'armeabi-v7a'
+        }
+        multiDexEnabled true
+
+
+        manifestPlaceholders = [
+                JPUSH_APPKEY : "5972793b8e2a26cd0ac701f6", //JPush上注册的包名对应的appkey.
+                JPUSH_CHANNEL: "android-release-v1.1.5", //暂时填写默认值即可.
+        ]
+        //添加配置文件字段
+        buildConfigField "boolean", "AUTO_UPDATES", "true"
+    }
+
+    buildTypes {
+        release {
+            minifyEnabled true
+            zipAlignEnabled true
+            shrinkResources true
+            proguardFiles getDefaultProguardFile('proguard-android.txt'), 'proguard-rules.pro'
+
+            signingConfig signingConfigs.release
+        }
+        debug {
+            minifyEnabled false
+            zipAlignEnabled true
+            shrinkResources false
+            proguardFiles getDefaultProguardFile('proguard-android.txt'), 'proguard-rules.pro'
+
+            signingConfig signingConfigs.debug
+        }
+    }
+
+
+    productFlavors {
+
+        production {
+            applicationId "com.wingplus.coomohome"
+            manifestPlaceholders = [APP_NAME       : "@string/app_name"
+                                    , JPUSH_PKGNAME: applicationId]
+        }
+
+        devServer {
+            applicationId "com.wingplus.coomohome.server"
+            manifestPlaceholders = [APP_NAME       : "@string/app_name_url"
+                                    , JPUSH_PKGNAME: applicationId]
+        }
+
+        devHost {
+            applicationId "com.wingplus.coomohome.host"
+            manifestPlaceholders = [APP_NAME       : "@string/app_name_host"
+                                    , JPUSH_PKGNAME: applicationId]
+
+        }
+    }
+//    sourceSets {
+//        main() {
+//            jniLibs.srcDirs = ['jniLibs']
+//        }
+//    }
+    dexOptions {
+        jumboMode true
+        incremental true
+        preDexLibraries true
+        javaMaxHeapSize "3g"
+        dexInProcess = true
+    }
+
+    lintOptions {
+        abortOnError false
+    }
+
+//    applicationVariants.all { variant ->
+//        variant.mergedFlavor.versionCode = gitVersionCode()
+//        variant.mergedFlavor.versionName = gitVersionTag()
+//        variant.outputs.each { output ->
+//            output.outputFile = new File(
+//                    output.outputFile.parent + "/${variant.buildType.name}",
+//                    "coomohome-${variant.buildType.name}-v${variant.versionName}-${variant.productFlavors[0].name}-${releaseTime()}.apk".toLowerCase())
+//        }
+//    }
+}
+
+dependencies {
+    compile fileTree(include: ['*.jar'], dir: 'libs')
+    androidTestCompile('com.android.support.test.espresso:espresso-core:2.2.2', {
+        exclude group: 'com.android.support', module: 'support-annotations'
+    })
+
+    //布局
+    compile 'com.android.support:appcompat-v7:26.+'
+    compile 'com.android.support:design:26.+'
+    compile 'com.android.support:support-vector-drawable:26.+'
+    compile 'com.android.support:cardview-v7:26.+'
+    compile 'com.android.support:support-annotations:26.0.2'
+
+    //    compile('com.alibaba.android:vlayout:1.2.2@aar') {
+
+    //        transitive = true
+
+    //    }
+
+    //图片加载
+    compile 'com.github.bumptech.glide:glide:4.3.1'
+
+    //    annotationProcessor 'com.github.bumptech.glide:compiler:4.1.1'
+
+    //视频
+    compile 'tv.danmaku.ijk.media:ijkplayer-java:0.8.2'
+    compile 'tv.danmaku.ijk.media:ijkplayer-armv7a:0.8.2'
+    compile 'com.danikula:videocache:2.7.0'
+
+    //扫码
+    compile 'com.google.zxing:core:3.3.0'
+    compile 'cn.bingoogolapple:bga-qrcodecore:1.1.8@aar'
+    compile 'cn.bingoogolapple:bga-zxing:1.1.8@aar'
+
+    //网络
+    compile 'com.squareup.okhttp3:okhttp:3.9.0'
+    compile 'com.just.agentweb:agentweb:2.0.0'
+
+    //web库的使用有点问题
+
+    //json解析
+    compile 'com.google.code.gson:gson:2.8.1'
+
+    //微信移动应用集成
+    compile 'com.tencent.mm.opensdk:wechat-sdk-android-with-mta:+'
+
+    //极光IM集成
+
+    //    compile 'cn.jiguang.sdk:jmessage:2.3.0'
+
+    // 此处以JMessage 2.3.0 版本为例。
+    compile 'cn.jiguang.sdk:jcore:1.1.7'
+
+    // 此处以JCore 1.1.7 版本为例。
+
+    //增加极光推送
+    compile 'cn.jiguang.sdk:jpush:3.0.9'
+
+    //ping++支付
+    compile 'com.pingxx:pingpp-core:2.1.14'
+
+    // 必须添加
+
+    //    compile 'com.tencent.mm.opensdk:wechat-sdk-android-without-mta:+' // 使用微信支付时添加,具体版本参考微信官方文档 //leaffun 已添加
+    compile 'com.pingxx:pingpp-alipay:2.1.14'
+
+    // 使用支付宝时添加
+
+    //    compile 'com.pingxx:pingpp-upacp:2.1.14'  // 使用银联支付时添加
+
+    //    compile 'com.pingxx:pingpp-qpay:2.1.14' // 使用QQ钱包时添加 //leaffun 不开通
+
+    //    compile 'com.pingxx:pingpp-cmbwallet:2.1.14' // 使用招行一网通时添加 //leaffun不开通
+
+    //下拉刷新
+    compile project(':TwinklingRefreshLayout')
+
+    //bugly
+    compile 'com.tencent.bugly:crashreport_upgrade:latest.release'
+
+    //其中latest.release指代最新版本号，也可以指定明确的版本号，例如1.2.0
+    compile 'com.tencent.bugly:nativecrashreport:latest.release'
+
+    //其中latest.release指代最新版本号，也可以指定明确的版本号，例如2.2.0
+    compile 'com.android.support:multidex:1.0.1'
+    testCompile 'junit:junit:4.12'
+    compile project(':xiaonengChatUI')
+}

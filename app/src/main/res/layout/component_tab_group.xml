@@ -1,0 +1,274 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="48dp"
+    android:background="@color/gray"
+    android:orientation="horizontal"
+    android:paddingTop="1px">
+
+
+    <LinearLayout
+        android:id="@+id/tab_home"
+        android:layout_width="0dp"
+        android:layout_height="match_parent"
+        android:layout_weight="1"
+        android:background="@color/white"
+        android:gravity="center"
+        android:orientation="vertical">
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="30dp"
+            android:background="@color/white">
+
+            <com.wingplus.coomohome.component.SquareImage
+                android:id="@+id/icon"
+                android:scaleType="fitXY"
+                android:layout_width="26dp"
+                android:layout_height="26dp"
+                android:layout_alignParentBottom="true"
+                android:layout_centerInParent="true"
+                android:src="@drawable/tab_home" />
+
+            <TextView
+                android:id="@+id/num"
+                android:layout_width="wrap_content"
+                android:layout_height="16dp"
+                android:layout_alignParentEnd="true"
+                android:layout_alignParentTop="true"
+                android:layout_marginEnd="5dp"
+                android:layout_marginStart="1dp"
+                android:layout_marginTop="2dp"
+                android:background="@drawable/bg_component_tab_num"
+                android:gravity="center"
+                android:minWidth="16dp"
+                android:padding="1dp"
+                android:text="3"
+                android:textColor="@color/white"
+                android:textSize="11sp"
+                android:visibility="gone" />
+        </RelativeLayout>
+
+        <TextView
+            android:id="@+id/label"
+            android:layout_width="match_parent"
+            android:layout_height="17dp"
+            android:gravity="center|top"
+            android:text="@string/title_home"
+            android:textSize="12sp" />
+
+    </LinearLayout>
+
+    <LinearLayout
+        android:id="@+id/tab_category"
+        android:layout_width="0dp"
+        android:layout_height="match_parent"
+        android:layout_weight="1"
+        android:background="@color/white"
+        android:gravity="center"
+        android:orientation="vertical">
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="30dp"
+            android:background="@color/white">
+
+            <com.wingplus.coomohome.component.SquareImage
+                android:id="@id/icon"
+                android:scaleType="fitXY"
+                android:layout_width="26dp"
+                android:layout_height="26dp"
+                android:layout_alignParentBottom="true"
+                android:layout_centerInParent="true"
+                android:src="@drawable/tab_commodity" />
+
+            <TextView
+                android:id="@id/num"
+                android:layout_width="wrap_content"
+                android:layout_height="16dp"
+                android:layout_alignParentEnd="true"
+                android:layout_alignParentTop="true"
+                android:layout_marginEnd="5dp"
+                android:layout_marginStart="1dp"
+                android:layout_marginTop="2dp"
+                android:background="@drawable/bg_component_tab_num"
+                android:gravity="center"
+                android:minWidth="16dp"
+                android:padding="1dp"
+                android:text="3"
+                android:textColor="@color/white"
+                android:textSize="11sp"
+                android:visibility="gone" />
+        </RelativeLayout>
+
+        <TextView
+            android:id="@id/label"
+            android:layout_width="match_parent"
+            android:layout_height="17dp"
+            android:gravity="center|top"
+            android:text="@string/title_category"
+            android:textSize="12sp" />
+
+    </LinearLayout>
+
+    <LinearLayout
+        android:id="@+id/tab_surprise"
+        android:layout_width="0dp"
+        android:layout_height="match_parent"
+        android:layout_weight="1"
+        android:background="@color/white"
+        android:gravity="center"
+        android:orientation="vertical">
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="30dp"
+            android:background="@color/white">
+
+            <com.wingplus.coomohome.component.SquareImage
+                android:id="@id/icon"
+                android:scaleType="fitXY"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentBottom="true"
+                android:layout_centerInParent="true"
+                android:src="@drawable/tab_activity" />
+
+            <TextView
+                android:id="@id/num"
+                android:layout_width="wrap_content"
+                android:layout_height="16dp"
+                android:layout_alignParentEnd="true"
+                android:layout_alignParentTop="true"
+                android:layout_marginEnd="5dp"
+                android:layout_marginStart="1dp"
+                android:layout_marginTop="2dp"
+                android:background="@drawable/bg_component_tab_num"
+                android:gravity="center"
+                android:minWidth="16dp"
+                android:padding="1dp"
+                android:text="3"
+                android:textColor="@color/white"
+                android:textSize="11sp"
+                android:visibility="gone" />
+        </RelativeLayout>
+
+        <TextView
+            android:id="@id/label"
+            android:layout_width="match_parent"
+            android:layout_height="17dp"
+            android:gravity="center|top"
+            android:text="@string/title_surprise"
+            android:textSize="12sp" />
+
+    </LinearLayout>
+
+    <LinearLayout
+        android:id="@+id/tab_cart"
+        android:layout_width="0dp"
+        android:layout_height="match_parent"
+        android:layout_weight="1"
+        android:background="@color/white"
+        android:gravity="center"
+        android:orientation="vertical">
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="30dp"
+            android:background="@color/white">
+
+            <com.wingplus.coomohome.component.SquareImage
+                android:id="@id/icon"
+                android:scaleType="fitXY"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentBottom="true"
+                android:layout_centerInParent="true"
+                android:src="@drawable/tab_shoppingcart" />
+
+            <TextView
+                android:id="@id/num"
+                android:visibility="gone"
+                android:layout_width="wrap_content"
+                android:layout_height="13dp"
+                android:layout_alignParentEnd="true"
+                android:layout_alignParentTop="true"
+                android:layout_marginEnd="18dp"
+                android:layout_marginStart="1dp"
+                android:layout_marginTop="2dp"
+                android:background="@drawable/bg_component_tab_num"
+                android:gravity="center"
+                android:minWidth="13dp"
+                android:minHeight="13dp"
+                android:paddingStart="2dp"
+                android:paddingEnd="2dp"
+                android:includeFontPadding="false"
+                android:lineSpacingMultiplier="0.8"
+                android:text="0"
+                android:textColor="@color/white"
+                android:textSize="11sp"
+                android:padding="0dp"
+                />
+        </RelativeLayout>
+
+        <TextView
+            android:id="@id/label"
+            android:layout_width="match_parent"
+            android:layout_height="17dp"
+            android:gravity="center|top"
+            android:text="@string/title_cart"
+            android:textSize="12sp" />
+    </LinearLayout>
+
+    <LinearLayout
+        android:id="@+id/tab_mine"
+        android:layout_width="0dp"
+        android:layout_height="match_parent"
+        android:layout_weight="1"
+        android:background="@color/white"
+        android:gravity="center"
+        android:orientation="vertical">
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="30dp"
+            android:background="@color/white">
+
+            <com.wingplus.coomohome.component.SquareImage
+                android:id="@id/icon"
+                android:scaleType="fitXY"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentBottom="true"
+                android:layout_centerInParent="true"
+                android:src="@drawable/tab_user" />
+
+            <TextView
+                android:id="@id/num"
+                android:layout_width="wrap_content"
+                android:layout_height="16dp"
+                android:layout_alignParentEnd="true"
+                android:layout_alignParentTop="true"
+                android:layout_marginEnd="5dp"
+                android:layout_marginStart="1dp"
+                android:layout_marginTop="2dp"
+                android:background="@drawable/bg_component_tab_num"
+                android:gravity="center"
+                android:minWidth="16dp"
+                android:padding="1dp"
+                android:text="3"
+                android:textColor="@color/white"
+                android:textSize="11sp"
+                android:visibility="gone" />
+        </RelativeLayout>
+
+        <TextView
+            android:id="@id/label"
+            android:layout_width="match_parent"
+            android:layout_height="17dp"
+            android:gravity="center|top"
+            android:text="@string/title_mine"
+            android:textSize="12sp" />
+
+    </LinearLayout>
+</LinearLayout>

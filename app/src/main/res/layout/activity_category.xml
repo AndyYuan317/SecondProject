@@ -1,0 +1,223 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/white"
+    android:orientation="vertical">
+    <!--顶栏-->
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/title_bar_height"
+        android:background="@drawable/bg_color_white">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:gravity="center"
+            android:orientation="horizontal">
+
+            <TextView
+                android:id="@+id/tool_text"
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:gravity="center"
+                android:onClick="onClick"
+                android:text="@string/title_category"
+                android:textColor="@color/titleBlack"
+                android:textSize="@dimen/title_bar_title_size" />
+
+            <ImageView
+                android:layout_width="25dp"
+                android:layout_height="match_parent"
+                android:src="@drawable/tab_icon_open_pre" />
+        </LinearLayout>
+
+
+        <ImageView
+            android:id="@+id/list_or_grid"
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:layout_alignParentEnd="true"
+            android:layout_centerInParent="true"
+            android:onClick="onClick"
+            android:paddingEnd="16dp"
+            android:src="@drawable/icon_columnlist" />
+
+        <ImageView
+            android:id="@+id/back"
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:layout_alignParentStart="true"
+            android:layout_centerInParent="true"
+            android:contentDescription="@string/word_back"
+            android:onClick="onClick"
+            android:paddingStart="16dp"
+            android:src="@drawable/icon_return" />
+    </RelativeLayout>
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="vertical">
+            <!--选项卡-->
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="40dp"
+                android:background="@color/titleGray"
+                android:orientation="horizontal"
+                android:paddingBottom="1px"
+                android:weightSum="3">
+
+                <LinearLayout
+                    android:id="@+id/category_second"
+                    android:layout_width="0dp"
+                    android:layout_height="match_parent"
+                    android:layout_weight="1"
+                    android:background="@color/white"
+                    android:gravity="center"
+                    android:onClick="onClick"
+                    android:orientation="horizontal">
+
+                    <TextView
+                        android:id="@+id/cate_chosen"
+                        android:layout_width="0dp"
+                        android:layout_height="match_parent"
+                        android:layout_weight="1"
+                        android:ellipsize="end"
+                        android:gravity="center"
+                        android:lines="1"
+                        android:maxLines="1"
+                        android:paddingStart="5dp"
+                        android:text="@string/word_all_cate"
+                        android:textColor="@color/search_tab_gray"
+                        android:textSize="14sp" />
+
+                    <ImageView
+                        android:layout_width="25dp"
+                        android:layout_height="match_parent"
+                        android:src="@drawable/tab_icon_open_pre" />
+                </LinearLayout>
+
+                <LinearLayout
+                    android:id="@+id/sort"
+                    android:layout_width="0dp"
+                    android:layout_height="match_parent"
+                    android:layout_weight="1"
+                    android:background="@color/white"
+                    android:gravity="center"
+                    android:onClick="onClick"
+                    android:orientation="horizontal">
+
+                    <TextView
+                        android:id="@+id/sort_chosen"
+                        android:layout_width="0dp"
+                        android:layout_height="match_parent"
+                        android:layout_weight="1"
+                        android:ellipsize="end"
+                        android:gravity="center"
+                        android:lines="1"
+                        android:maxLines="1"
+                        android:paddingStart="5dp"
+                        android:text="@string/word_default_sort"
+                        android:textColor="@color/search_tab_gray"
+                        android:textSize="14sp" />
+
+                    <ImageView
+                        android:layout_width="25dp"
+                        android:layout_height="match_parent"
+                        android:src="@drawable/tab_icon_open_pre" />
+                </LinearLayout>
+
+                <LinearLayout
+                    android:id="@+id/filter"
+                    android:layout_width="0dp"
+                    android:layout_height="match_parent"
+                    android:layout_weight="1"
+                    android:background="@color/white"
+                    android:gravity="center"
+                    android:onClick="onClick"
+                    android:orientation="horizontal">
+
+                    <ImageView
+                        android:layout_width="20dp"
+                        android:layout_height="20dp"
+                        android:src="@drawable/tab_icon_screen" />
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="match_parent"
+                        android:gravity="center"
+                        android:text="@string/word_filter"
+                        android:textColor="@color/search_tab_gray"
+                        android:textSize="14sp" />
+
+
+                </LinearLayout>
+
+            </LinearLayout>
+
+            <!--内容-->
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent">
+                <!--商品-->
+                <com.wingplus.coomohome.component.MyRefreshLayout
+                    android:id="@+id/tr"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent">
+
+                    <android.support.v7.widget.RecyclerView
+                        android:id="@+id/search_result_goods"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:background="@color/gray_top">
+
+                    </android.support.v7.widget.RecyclerView>
+                </com.wingplus.coomohome.component.MyRefreshLayout>
+
+                <!--选项-->
+                <RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+                    android:id="@+id/chose_back"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:background="@color/tran_gray"
+                    android:gravity="top"
+                    android:onClick="onClick"
+                    android:orientation="vertical">
+
+                    <android.support.v7.widget.RecyclerView
+                        android:id="@+id/chose_content"
+                        android:layout_width="match_parent"
+                        android:layout_height="300dp"
+                        android:background="@color/white">
+
+                    </android.support.v7.widget.RecyclerView>
+
+
+                </RelativeLayout>
+            </RelativeLayout>
+        </LinearLayout>
+
+
+        <RelativeLayout
+            android:id="@+id/cate_back"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:background="@color/tran_gray"
+            android:onClick="onClick">
+
+            <android.support.v7.widget.RecyclerView
+                android:id="@+id/cate_content"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="@color/white">
+
+            </android.support.v7.widget.RecyclerView>
+        </RelativeLayout>
+    </RelativeLayout>
+</LinearLayout>

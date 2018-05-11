@@ -1,0 +1,98 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/back"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:layout_marginBottom="10dp"
+    android:background="@color/white"
+    android:orientation="horizontal"
+    android:paddingBottom="16dp"
+    android:paddingEnd="16dp"
+    android:paddingStart="16dp"
+    android:paddingTop="16dp">
+
+    <LinearLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="vertical">
+
+        <TextView
+            android:id="@+id/acceptor_name"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:ellipsize="end"
+            android:gravity="start"
+            android:maxLength="10"
+            android:minWidth="46dp"
+            android:text="砺学砺学"
+            android:textColor="@color/combinationBlack"
+            android:textSize="16sp" />
+
+        <RelativeLayout
+            android:id="@+id/num_content"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:minWidth="46dp">
+
+            <TextView
+                android:id="@+id/acceptor_address_default"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="8dp"
+                android:background="@drawable/bg_text_rectangle_border_primary_8"
+                android:gravity="start"
+                android:paddingEnd="8dp"
+                android:paddingStart="8dp"
+                android:text="默认"
+                android:textColor="@color/colorPrimary"
+                android:textSize="10sp" />
+        </RelativeLayout>
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_weight="1"
+        android:orientation="vertical"
+        android:paddingStart="16dp">
+
+        <TextView
+            android:id="@+id/acceptor_phone"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:gravity="start"
+            android:minWidth="62dp"
+            android:text="151****8888"
+            android:textColor="@color/combinationBlack"
+            android:textSize="18sp" />
+
+
+        <TextView
+            android:id="@+id/acceptor_address"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="8dp"
+            android:gravity="start"
+            android:minWidth="72dp"
+            android:text="湖南省长沙市芙蓉南路BOBO天下城213号068"
+            android:textColor="@color/titleGray"
+            android:textSize="14sp" />
+    </LinearLayout>
+
+
+    <ImageView
+        android:id="@+id/edit"
+        android:layout_width="22dp"
+        android:layout_height="22dp"
+        android:layout_gravity="center"
+        android:layout_marginEnd="10dp"
+        android:src="@drawable/edit" />
+
+    <ImageView
+        android:id="@+id/delete_address"
+        android:layout_width="26dp"
+        android:layout_height="26dp"
+        android:layout_gravity="center"
+        android:src="@drawable/icon_delete" />
+
+</LinearLayout>

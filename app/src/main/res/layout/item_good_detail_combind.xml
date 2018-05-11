@@ -1,0 +1,65 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!--组合优惠-->
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    android:layout_marginBottom="30dp"
+    android:layout_marginEnd="10dp"
+    android:background="@drawable/bg_text_rectangle_border_combination"
+    android:orientation="vertical"
+    android:padding="18dp">
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <TextView
+            android:id="@+id/combind_name"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentStart="true"
+            android:layout_alignParentTop="true"
+            android:text="组合优惠1"
+            android:textColor="@color/titleBlack"
+            android:textSize="14sp" />
+
+        <com.wingplus.coomohome.component.SpannableTextView
+            android:id="@+id/combind_price_now"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/combind_name"
+            android:layout_marginTop="8dp"
+            android:text="5522"
+            android:textColor="@color/combinationBlack"
+            android:textSize="20sp" />
+
+        <com.wingplus.coomohome.component.StrikeTextView
+            android:id="@+id/combind_price_old"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignBaseline="@id/combind_price_now"
+            android:layout_marginStart="10dp"
+            android:layout_toEndOf="@id/combind_price_now"
+            android:text="5850"
+            android:textColor="@color/titleGray"
+            android:textSize="12sp" />
+
+        <ImageView
+            android:id="@+id/combind_add_cart"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentEnd="true"
+            android:layout_centerInParent="true"
+            android:src="@drawable/icon_shoppingcart" />
+    </RelativeLayout>
+
+    <LinearLayout
+        android:id="@+id/combind_goods"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:gravity="center"
+        android:orientation="horizontal"
+        android:paddingBottom="10dp"
+        android:paddingTop="30dp">
+    </LinearLayout>
+</LinearLayout>

@@ -1,0 +1,57 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:layout_marginTop="10dp"
+    android:background="@color/white"
+    android:orientation="vertical">
+
+    <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+        android:id="@+id/title_content"
+        android:layout_width="match_parent"
+        android:layout_height="50dp"
+        android:background="@color/white"
+        android:gravity="center"
+        android:visibility="gone">
+
+
+        <TextView
+            android:layout_width="50dp"
+            android:layout_height="1px"
+            android:background="@color/titleGray" />
+
+        <TextView
+            android:id="@+id/title"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginEnd="10dp"
+            android:layout_marginStart="10dp"
+            android:text="本周最佳人气榜"
+            android:textColor="@color/titleBlack"
+            android:textSize="16sp" />
+
+        <TextView
+            android:layout_width="50dp"
+            android:layout_height="1px"
+            android:background="@color/titleGray" />
+    </LinearLayout>
+
+    <com.wingplus.coomohome.component.ResizableImageView
+        android:id="@+id/floor_img"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="14dp"
+        android:layout_marginEnd="16dp"
+        android:layout_marginStart="16dp"
+        android:layout_marginTop="20dp"
+        android:background="@color/white"
+        android:scaleType="fitXY"/>
+
+    <android.support.v7.widget.RecyclerView
+        android:id="@+id/floor"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@color/white"
+        android:paddingStart="16dp" />
+
+</LinearLayout>

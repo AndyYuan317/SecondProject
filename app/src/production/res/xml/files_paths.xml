@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="utf-8"?>
+<paths>
+
+
+    <external-path name="my_images" path="Android/data/com.wingplus.coomohome/files/Pictures"/>
+
+        <external-path path="Android/data/${applicationId}/" name="camera_photos" />
+        <external-path path="." name="external_storage_root" />
+
+</paths>

@@ -1,0 +1,84 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:background="@color/white"
+    android:orientation="horizontal"
+    android:padding="16dp">
+
+    <ImageView
+        android:id="@+id/good_img"
+        android:layout_width="84dp"
+        android:layout_height="84dp"
+        android:layout_marginEnd="10dp"
+        android:src="@drawable/load_err_empty" />
+
+    <LinearLayout
+        android:layout_width="0dp"
+        android:layout_height="match_parent"
+        android:layout_weight="1"
+        android:orientation="vertical">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal">
+
+            <TextView
+                android:id="@+id/good_title"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:ellipsize="end"
+                android:gravity="top|start"
+                android:lines="1"
+                android:maxLines="1"
+                android:text="@string/word_good_name_Royal"
+                android:textColor="@color/titleBlack"
+                android:textSize="@dimen/item_cart_good_name" />
+
+            <TextView
+                android:id="@+id/nums"
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:gravity="center"
+                android:text="x1"
+                android:textColor="@color/titleGray"
+                android:textSize="14sp"
+                android:visibility="visible" />
+        </LinearLayout>
+
+
+        <TextView
+            android:id="@+id/good_intro"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="6dp"
+            android:ellipsize="end"
+            android:gravity="center|start"
+            android:lines="1"
+            android:maxLines="1"
+            android:text="@string/word_7_control"
+            android:textColor="@color/titleGray"
+            android:textSize="@dimen/item_cart_good_des" />
+
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:gravity="center_vertical|bottom">
+
+            <com.wingplus.coomohome.component.SpannableTextView
+                android:id="@+id/good_price"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:gravity="center|start"
+                android:text="@string/word_1799"
+                android:textColor="@color/combinationBlack"
+                android:textSize="@dimen/item_cart_good_price" />
+        </LinearLayout>
+    </LinearLayout>
+
+
+</LinearLayout>

@@ -1,0 +1,157 @@
+<?xml version="1.0" encoding="utf-8"?><!--属性弹出框-->
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/purchase"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/tran_gray"
+    android:gravity="bottom"
+    android:orientation="vertical"
+    android:visibility="visible">
+
+    <RelativeLayout
+        android:id="@+id/purchase_back"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="1">
+
+    </RelativeLayout>
+
+    <LinearLayout
+        android:id="@+id/purchase_content"
+        android:layout_width="match_parent"
+        android:layout_height="400dp"
+        android:background="@color/white"
+        android:orientation="vertical"
+        android:paddingEnd="16dp"
+        android:paddingStart="16dp"
+        android:paddingTop="20dp">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+            <ImageView
+                android:id="@+id/purchase_img"
+                android:layout_width="88dp"
+                android:layout_height="88dp"
+                android:background="@drawable/bg_text_rectangle_border_commit"
+                android:scaleType="centerCrop"
+                android:src="@drawable/load_err_empty"/>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:gravity="bottom"
+                android:orientation="vertical">
+
+                <RelativeLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="0dp"
+                    android:layout_weight="1">
+
+                    <ImageView
+                        android:id="@+id/purchase_close"
+                        android:layout_width="16dp"
+                        android:layout_height="16dp"
+                        android:layout_alignParentEnd="true"
+                        android:src="@drawable/icon_close" />
+
+                </RelativeLayout>
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="bottom">
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:paddingStart="15dp"
+                        android:text="@string/word_price"
+                        android:textColor="@color/titleBlack"
+                        android:textSize="14sp" />
+
+                    <com.wingplus.coomohome.component.SpannableTextView
+                        android:id="@+id/price_now"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:paddingEnd="15dp"
+                        android:text="@string/word_goods_price_now"
+                        android:textColor="@color/black"
+                        android:textSize="@dimen/goods_detail_good_price_textSize" />
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="bottom"
+                    android:layout_marginTop="8dp">
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:paddingStart="15dp"
+                        android:text="@string/word_chosen"
+                        android:textColor="@color/titleGray"
+                        android:textSize="@dimen/popup_attr_textSize" />
+
+                    <TextView
+                        android:id="@+id/chosen_attrs"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:ellipsize="end"
+                        android:lines="1"
+                        android:maxLines="1"
+                        android:paddingEnd="15dp"
+                        android:text="@string/word_attr"
+                        android:textSize="@dimen/popup_attr_textSize" />
+                </LinearLayout>
+
+            </LinearLayout>
+        </LinearLayout>
+
+        <android.support.v7.widget.RecyclerView
+            android:id="@+id/purchase_attrs"
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:layout_marginTop="22dp"
+            android:layout_weight="1"
+            android:overScrollMode="never"
+            android:scrollbarSize="2dp"
+            android:scrollbars="vertical">
+
+        </android.support.v7.widget.RecyclerView>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:layout_marginBottom="5dp">
+
+            <TextView
+                android:id="@+id/stock"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginEnd="16dp"
+                android:textColor="@color/colorPrimary"
+                android:textSize="12sp" />
+
+            <TextView
+                android:id="@+id/date_tip"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:textColor="@color/titleGrey"
+                android:textSize="12sp" />
+        </LinearLayout>
+    </LinearLayout>
+
+    <TextView
+        android:id="@+id/change"
+        android:layout_width="match_parent"
+        android:layout_height="52dp"
+        android:background="@color/colorPrimary"
+        android:gravity="center"
+        android:text="确定"
+        android:textColor="@color/white"
+        android:textSize="20sp" />
+</LinearLayout>

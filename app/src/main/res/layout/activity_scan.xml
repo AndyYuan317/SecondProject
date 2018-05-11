@@ -1,0 +1,102 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical">
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/title_bar_height"
+        android:background="@drawable/bg_color_white">
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:gravity="center"
+            android:text="@string/word_qrcode"
+            android:textColor="@color/titleBlack"
+            android:textSize="@dimen/title_bar_title_size" />
+
+        <ImageView
+            android:id="@+id/back"
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:layout_alignParentStart="true"
+            android:layout_centerInParent="true"
+            android:contentDescription="@string/word_back"
+            android:onClick="onClick"
+            android:paddingStart="16dp"
+            android:src="@drawable/icon_return" />
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="1px"
+            android:layout_alignParentBottom="true"
+            android:background="@color/gray" />
+    </RelativeLayout>
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <cn.bingoogolapple.qrcode.zxing.ZXingView
+            android:id="@+id/zxingview"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            app:qrcv_animTime="1000"
+            app:qrcv_borderColor="@android:color/transparent"
+            app:qrcv_borderSize="1dp"
+            app:qrcv_cornerColor="@color/colorPrimary"
+            app:qrcv_cornerLength="15dp"
+            app:qrcv_cornerSize="2dp"
+            app:qrcv_isBarcode="false"
+            app:qrcv_isCenterVertical="false"
+            app:qrcv_isOnlyDecodeScanBoxArea="true"
+            app:qrcv_isScanLineReverse="false"
+            app:qrcv_isShowDefaultGridScanLineDrawable="false"
+            app:qrcv_isShowDefaultScanLineDrawable="true"
+            app:qrcv_isShowTipBackground="true"
+            app:qrcv_isShowTipTextAsSingleLine="false"
+            app:qrcv_isTipTextBelowRect="true"
+            app:qrcv_maskColor="@color/tran_gray"
+            app:qrcv_qrCodeTipText="放入框内，自动扫描"
+            app:qrcv_rectWidth="250dp"
+            app:qrcv_scanLineColor="@color/colorPrimary"
+            app:qrcv_scanLineMargin="0dp"
+            app:qrcv_scanLineSize="0.5dp"
+            app:qrcv_tipBackgroundColor="@color/translate"
+            app:qrcv_tipTextColor="@android:color/white"
+            app:qrcv_tipTextMargin="48dp"
+            app:qrcv_tipTextSize="14sp"
+            app:qrcv_toolbarHeight="0dp"
+            app:qrcv_topOffset="80dp" />
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="450dp"
+            android:gravity="center"
+            android:visibility="gone">
+
+            <ImageView
+                android:id="@+id/gallery"
+                android:layout_width="80dp"
+                android:layout_height="80dp"
+                android:background="@color/translate"
+                android:onClick="onClick"
+                android:src="@drawable/ic_scan_gallery" />
+
+            <ImageView
+                android:id="@+id/light"
+                android:layout_width="80dp"
+                android:layout_height="80dp"
+                android:layout_marginStart="30dp"
+                android:layout_toEndOf="@id/gallery"
+                android:background="@color/translate"
+                android:onClick="onClick"
+                android:src="@drawable/ic_scan_light_open" />
+        </RelativeLayout>
+    </RelativeLayout>
+
+</LinearLayout>

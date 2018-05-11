@@ -1,0 +1,733 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    package="com.wingplus.coomohome">
+
+
+    <!--极光IM Required -->
+    <uses-permission android:name="${JPUSH_PKGNAME}.permission.JPUSH_MESSAGE" />
+    <uses-permission android:name="android.permission.RECEIVE_USER_PRESENT" />
+    <uses-permission android:name="android.permission.WAKE_LOCK" />
+    <uses-permission android:name="android.permission.MOUNT_UNMOUNT_FILESYSTEMS" />
+
+
+    <uses-permission android:name="android.permission.ACCESS_FINE_LOCATION" />
+    <uses-permission android:name="android.permission.ACCESS_WIFI_STATE" />
+    <uses-permission android:name="android.permission.READ_EXTERNAL_STORAGE" />
+    <uses-permission android:name="android.permission.INTERNET" />
+    <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE" />
+    <uses-permission android:name="android.permission.CAMERA" />
+    <uses-permission android:name="android.permission.FLASHLIGHT" />
+    <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE" />
+    <uses-permission android:name="android.permission.VIBRATE" />
+    <uses-permission android:name="android.permission.READ_PHONE_STATE" />
+    <uses-permission android:name="com.android.launcher.permission.READ_SETTINGS" />
+    <uses-permission android:name="android.permission.WRITE_SETTINGS" />
+
+
+    <!-- 银联需要的权限 -->
+    <!--<uses-permission android:name="android.permission.NFC" />-->
+    <uses-permission android:name="com.huawei.android.launcher.permission.CHANGE_BADGE"/>
+
+
+    <!-- ***************************小能SDK所需要的权限 ********************* -->
+    <uses-permission android:name="android.permission.RECORD_AUDIO" />
+    <uses-permission android:name="android.permission.CALL_PHONE" />
+
+    <uses-feature android:name="android.hardware.camera" />
+    <uses-feature android:name="android.hardware.camera.autofocus" />
+
+    <uses-permission android:name="android.permission.RECEIVE_BOOT_COMPLETED" />
+    <!-- ***************************小能SDK所需要的权限 ********************* -->
+
+    <!-- ***************************小能SDK 华为推送所需要的权限 ********************* -->
+    <!-- 必需的权限 -->
+    <!--<uses-permission android:name="android.permission.WAKE_LOCK" />-->
+    <!-- 创建桌面快捷方式,无富媒体消息则不需要 -->
+    <uses-permission android:name="com.android.launcher.permission.INSTALL_SHORTCUT" />
+    <!-- 根据地理位置推送消息需要事先上报地理位置信息，需要如下权限，不上报则不需要， -->
+    <uses-permission android:name="android.permission.CHANGE_WIFI_STATE" />
+    <uses-permission android:name="android.permission.ACCESS_COARSE_LOCATION" />
+
+    <!-- 访问Push APK provider需要的权限，SDK富媒体需要,无富媒体功能则不需要 -->
+    <uses-permission android:name="com.huawei.pushagent.permission.RICHMEDIA_PROVIDER" />
+    <!-- ***************************小能SDK 华为推送所需要的权限 ********************* -->
+
+
+    <!-- ***************************小能SDK 小米推送所需要的权限 ********************* -->
+    <!--<uses-permission android:name="android.permission.ACCESS_WIFI_STATE" />-->
+    <uses-permission android:name="android.permission.GET_TASKS" />
+    <!-- 注意下面两个权限中的 cn.xiaoneng.demo 需要修改为您应用的包名 -->
+    <permission
+        android:name="${applicationId}.permission.MIPUSH_RECEIVE"
+        android:protectionLevel="signature" />
+
+    <uses-permission android:name="${applicationId}.permission.MIPUSH_RECEIVE" />
+    <uses-permission android:name="android.permission.VIBRATE" />
+    <!-- ***************************小能SDK 小米推送所需要的权限 ********************* -->
+
+
+
+    <application
+        android:name=".application.MallApplication"
+        android:allowBackup="true"
+        android:icon="@mipmap/icon_aboutus_logo"
+        android:label="${APP_NAME}"
+        android:supportsRtl="true"
+        android:theme="@style/CoomoTheme"
+        tools:replace="android:label">
+
+        <activity
+            android:name=".activity.WelcomeActivity"
+            android:description="@string/app_activity_welcome"
+            android:screenOrientation="portrait"
+            android:theme="@android:style/Theme.Black.NoTitleBar.Fullscreen">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity>
+        <activity
+            android:name=".activity.MainActivity"
+            android:configChanges="orientation|keyboardHidden|keyboard|screenSize"
+            android:launchMode="singleTask"
+            android:screenOrientation="portrait">
+
+        </activity>
+        <activity
+            android:name=".activity.GoodsDetailActivity"
+            android:label="${APP_NAME}"
+            android:screenOrientation="portrait"
+            android:hardwareAccelerated="true"
+            android:configChanges="orientation|screenSize">
+            <intent-filter>
+                <action android:name="android.intent.action.VIEW" />
+
+                <category android:name="android.intent.category.DEFAULT" />
+                <category android:name="android.intent.category.BROWSABLE" />
+
+
+                <data
+                    android:host="coomo.mall"
+                    android:pathPrefix="/open"
+                    android:scheme="coomo" />
+            </intent-filter>
+        </activity>
+        <activity
+            android:name=".activity.WebActivity"
+            android:label="${APP_NAME}"
+            android:screenOrientation="portrait">
+            <intent-filter>
+                <action android:name="android.intent.action.VIEW" />
+                <category android:name="android.intent.category.DEFAULT" />
+                <category android:name="android.intent.category.BROWSABLE" />
+                <data android:scheme="http">
+
+                </data>
+                <data android:scheme="https">
+
+                </data>
+            </intent-filter>
+        </activity>
+        <activity
+            android:name=".activity.CategoryActivity"
+            android:description="@string/app_activity_category"
+            android:screenOrientation="portrait"
+            android:hardwareAccelerated="true">
+
+        </activity>
+        <activity
+            android:name=".activity.SearchActivity"
+            android:description="@string/app_activity_search"
+            android:launchMode="singleTask"
+            android:screenOrientation="portrait">
+
+        </activity>
+        <activity
+            android:name=".activity.SearchResultActivity"
+            android:description="@string/app_activity_search_result"
+            android:launchMode="singleTask"
+            android:screenOrientation="portrait"
+            android:hardwareAccelerated="true">
+
+        </activity>
+        <activity
+            android:name=".activity.CartActivity"
+            android:description="@string/app_activity_cart"
+            android:launchMode="singleTask"
+            android:screenOrientation="portrait">
+
+        </activity>
+        <activity
+            android:name=".activity.LocationActivity"
+            android:description="@string/app_activity_location"
+            android:screenOrientation="portrait">
+
+        </activity>
+        <activity
+            android:name=".activity.ScanActivity"
+            android:description="@string/app_activity_scan"
+            android:screenOrientation="portrait">
+
+        </activity>
+        <activity
+            android:name=".activity.MineOrderActivity"
+            android:description="@string/app_activity_mine_order"
+            android:screenOrientation="portrait">
+
+        </activity>
+        <activity
+            android:name=".activity.MineProfileActivity"
+            android:description="@string/app_activity_mine_profile"
+            android:screenOrientation="portrait">
+
+        </activity>
+        <activity
+            android:name=".activity.AfterSaleActivity"
+            android:description="@string/app_activity_after_sale"
+            android:screenOrientation="portrait">
+
+        </activity>
+        <activity
+            android:name=".activity.RecommendActivity"
+            android:description="@string/app_activity_recommend"
+            android:screenOrientation="portrait">
+
+        </activity>
+        <activity
+            android:name=".activity.QRcodeActivity"
+            android:description="@string/app_activity_qrcode"
+            android:screenOrientation="portrait">
+
+        </activity>
+        <activity
+            android:name=".activity.MineWalletActivity"
+            android:description="@string/app_activity_mine_wallet"
+            android:screenOrientation="portrait">
+
+        </activity>
+        <activity
+            android:name=".activity.PromotionActivity"
+            android:description="@string/app_activity_promotion"
+            android:screenOrientation="portrait">
+
+        </activity>
+        <activity
+            android:name=".activity.RegularActivity"
+            android:description="@string/app_activity_regular"
+            android:screenOrientation="portrait">
+
+        </activity>
+        <activity
+            android:name=".activity.ZoomImageActivity"
+            android:description="@string/app_activity_welcome"
+            android:screenOrientation="portrait">
+
+        </activity>
+        <activity
+            android:name=".activity.LoginActivity"
+            android:description="@string/app_activity_login"
+            android:screenOrientation="portrait">
+
+        </activity>
+        <activity
+            android:name=".activity.RegisterActivity"
+            android:description="@string/app_activity_register"
+            android:screenOrientation="portrait">
+
+        </activity>
+        <activity
+            android:name=".activity.OrderMakeActivity"
+            android:description="@string/app_activity_order_make"
+            android:screenOrientation="portrait">
+
+        </activity>
+        <activity
+            android:name=".activity.OrderDetailActivity"
+            android:description="@string/app_activity_order_detail"
+            android:screenOrientation="portrait">
+
+        </activity>
+        <activity
+            android:name=".activity.CommitActivity"
+            android:description="@string/app_activity_commit"
+            android:screenOrientation="portrait">
+
+        </activity>
+        <activity
+            android:name=".activity.CollectActivity"
+            android:description="@string/word_collect"
+            android:screenOrientation="portrait">
+
+        </activity>
+        <activity
+            android:name=".activity.CouponActivity"
+            android:description="@string/word_coupon"
+            android:screenOrientation="portrait">
+
+        </activity>
+        <activity
+            android:name=".activity.IntegralActivity"
+            android:description="@string/word_integral"
+            android:screenOrientation="portrait">
+
+        </activity>
+        <activity
+            android:name=".activity.NewsActivity"
+            android:description="@string/word_news"
+            android:screenOrientation="portrait">
+
+        </activity>
+        <activity
+            android:name=".activity.WelfareActivity"
+            android:description="@string/word_welfare"
+            android:screenOrientation="portrait">
+
+        </activity>
+        <activity
+            android:name=".activity.StoreActivity"
+            android:description="@string/app_activity_store"
+            android:screenOrientation="portrait">
+
+        </activity>
+        <activity
+            android:name=".activity.OrderAddressActivity"
+            android:description="@string/app_activity_address"
+            android:screenOrientation="portrait">
+
+        </activity>
+        <activity
+            android:name=".activity.OrderAddressEditActivity"
+            android:description="@string/app_activity_address_edit"
+            android:screenOrientation="portrait">
+
+        </activity>
+        <activity
+            android:name=".activity.InviteFriendActivity"
+            android:description="@string/word_friend"
+            android:screenOrientation="portrait">
+
+        </activity>
+        <activity
+            android:name=".activity.SettingActivity"
+            android:description="@string/word_settings"
+            android:screenOrientation="portrait">
+
+        </activity>
+        <activity
+            android:name=".activity.FeedBackActivity"
+            android:description="@string/app_activity_feedback"
+            android:screenOrientation="portrait">
+
+        </activity>
+        <activity
+            android:name=".activity.CustomerServiceActivity"
+            android:description="@string/word_online_custom_service"
+            android:screenOrientation="portrait">
+
+        </activity>
+        <activity
+            android:name=".activity.GiftCenterActivity"
+            android:description="@string/word_gift"
+            android:screenOrientation="portrait">
+
+        </activity>
+        <activity
+            android:name=".activity.ScheduleActivity"
+            android:description="@string/word_logistics_schedule"
+            android:screenOrientation="portrait">
+
+        </activity>
+
+        <activity
+            android:name=".activity.MapActivity"
+            android:description="@string/word_location_show"
+            android:screenOrientation="portrait">
+
+        </activity>
+        <activity
+            android:name=".activity.ListChooseActivity"
+            android:description="@string/app_name"
+            android:screenOrientation="portrait">
+
+        </activity>
+        <activity
+            android:name=".activity.PayActivity"
+            android:description="@string/word_pay"
+            android:screenOrientation="portrait">
+
+        </activity>
+        <activity
+            android:name=".activity.PayResultActivity"
+            android:description="@string/word_pay_result"
+            android:screenOrientation="portrait">
+
+        </activity>
+        <activity
+            android:name=".activity.ReturnApplyActivity"
+            android:description="@string/word_push_return_apply"
+            android:screenOrientation="portrait">
+
+        </activity>
+        <activity
+            android:name=".activity.ReturnCustomServiceActivity"
+            android:description="@string/word_custom_service"
+            android:screenOrientation="portrait">
+
+        </activity>
+        <activity
+            android:name=".activity.ReturnLogisticsActivity"
+            android:description="@string/word_logistics_info_write"
+            android:screenOrientation="portrait">
+
+        </activity>
+        <activity
+            android:name=".activity.ReturnSureGoodActivity"
+            android:description="@string/word_logistics_info_write"
+            android:screenOrientation="portrait">
+
+        </activity>
+        <activity
+            android:name=".activity.ReturnMoneyActivity"
+            android:description="@string/word_logistics_info_write"
+            android:screenOrientation="portrait">
+
+        </activity>
+        <activity
+            android:name=".activity.ReturnCancelActivity"
+            android:description="@string/word_logistics_info_write"
+            android:screenOrientation="portrait">
+
+        </activity>
+        <activity
+            android:name=".activity.AlertActivity"
+            android:theme="@style/NoTitleTranslucentTheme"
+            android:screenOrientation="portrait">
+
+        </activity>
+        <activity
+            android:name=".activity.BindActivity"
+            android:theme="@style/NoTitleTranslucentTheme"
+            android:screenOrientation="portrait">
+
+        </activity>
+
+        <activity
+            android:name=".activity.AboutUsActivity"
+            android:screenOrientation="portrait">
+
+        </activity>
+        <activity
+            android:name=".activity.BrandStoryActivity"
+            android:screenOrientation="portrait">
+
+        </activity>
+        <activity
+            android:name=".activity.CustomerServiceOrderActivity"
+            android:screenOrientation="portrait">
+
+        </activity>
+
+        <provider
+            android:name="android.support.v4.content.FileProvider"
+            android:authorities="${applicationId}.fileprovider"
+            android:exported="false"
+            android:grantUriPermissions="true">
+            <meta-data android:name="android.support.FILE_PROVIDER_PATHS"
+                android:resource="@xml/files_paths">
+
+            </meta-data>
+        </provider>
+
+        <!--第三方1：极光IM Required SDK 核心功能-->
+        <!-- 可配置android:process参数将PushService放在其他进程中 -->
+        <service
+            android:name="cn.jpush.android.service.PushService"
+            android:enabled="true"
+            android:exported="false">
+            <intent-filter>
+                <action android:name="cn.jpush.android.intent.REGISTER" />
+                <action android:name="cn.jpush.android.intent.REPORT" />
+                <action android:name="cn.jpush.android.intent.PushService" />
+                <action android:name="cn.jpush.android.intent.PUSH_TIME" />
+            </intent-filter>
+        </service>
+
+        <!-- Required SDK核心功能-->
+        <receiver
+            android:name="cn.jpush.android.service.PushReceiver"
+            android:enabled="true"
+            android:exported="false">
+            <intent-filter android:priority="1000">
+                <action android:name="cn.jpush.android.intent.NOTIFICATION_RECEIVED_PROXY" />
+                <category android:name="${JPUSH_PKGNAME}" />
+            </intent-filter>
+            <intent-filter>
+                <action android:name="android.intent.action.USER_PRESENT" />
+                <action android:name="android.net.conn.CONNECTIVITY_CHANGE" />
+            </intent-filter>
+            <!-- Optional -->
+            <intent-filter>
+                <action android:name="android.intent.action.PACKAGE_ADDED" />
+                <action android:name="android.intent.action.PACKAGE_REMOVED" />
+
+                <data android:scheme="package" />
+            </intent-filter>
+        </receiver>
+
+        <!-- Required SDK核心功能-->
+        <receiver
+            android:name="cn.jpush.android.service.AlarmReceiver"
+            android:exported="false" />
+
+        <!-- Required since JCore 1.1.7. SDK 核心功能-->
+        <provider
+            android:name="cn.jpush.android.service.DataProvider"
+            android:authorities="${JPUSH_PKGNAME}.DataProvider"
+            android:exported="true"
+            tools:replace="android:authorities,android:exported" />
+
+        <!-- Required JMessage SDK核心功能-->
+        <!--<receiver-->
+            <!--android:name="cn.jpush.im.android.helpers.IMReceiver"-->
+            <!--android:enabled="true"-->
+            <!--android:exported="false">-->
+            <!--<intent-filter android:priority="1000">-->
+                <!--<action android:name="cn.jpush.im.android.action.IM_RESPONSE" />-->
+                <!--<action android:name="cn.jpush.im.android.action.NOTIFICATION_CLICK_PROXY" />-->
+
+                <!--<category android:name="${JPUSH_PKGNAME}" />-->
+            <!--</intent-filter>-->
+        <!--</receiver>-->
+
+        <!-- Required. For publish channel feature -->
+        <!-- JPUSH_CHANNEL 是为了方便开发者统计APK分发渠道。-->
+        <!-- 例如: -->
+        <!-- 发到 Google Play 的APK可以设置为 google-play; -->
+        <!-- 发到其他市场的 APK 可以设置为 xxx-market。 -->
+        <!-- 目前这个渠道统计功能的报表还未开放。-->
+        <meta-data
+            android:name="JPUSH_CHANNEL"
+            android:value="${JPUSH_CHANNEL}" />
+
+        <!-- Required. AppKey copied from Portal -->
+        <meta-data
+            android:name="JPUSH_APPKEY"
+            android:value="${JPUSH_APPKEY}" />
+
+
+        <!--第三方2：极光推送 Required SDK核心功能-->
+        <activity
+            android:name="cn.jpush.android.ui.PushActivity"
+            android:configChanges="orientation|keyboardHidden"
+            android:exported="false"
+            android:theme="@android:style/Theme.NoTitleBar">
+            <intent-filter>
+                <action android:name="cn.jpush.android.ui.PushActivity" />
+
+                <category android:name="android.intent.category.DEFAULT" />
+                <category android:name="${JPUSH_PKGNAME}" />
+            </intent-filter>
+        </activity>
+        <!-- SDK核心功能-->
+        <activity
+            android:name="cn.jpush.android.ui.PopWinActivity"
+            android:configChanges="orientation|keyboardHidden"
+            android:exported="false"
+            android:theme="@style/MyDialogStyle">
+            <intent-filter>
+                <category android:name="android.intent.category.DEFAULT" />
+                <category android:name="${JPUSH_PKGNAME}" />
+            </intent-filter>
+        </activity>
+
+        <!-- Required SDK核心功能-->
+        <!--<service-->
+        <!--<service-->
+        <!--android:name="cn.jpush.android.service.DownloadService"-->
+        <!--android:enabled="true"-->
+        <!--android:exported="false">-->
+
+        <!--</service>-->
+
+        <!-- Required since 3.0.7 -->
+        <!-- 新的tag/alias接口结果返回需要开发者配置一个自定的广播 -->
+        <!-- 该广播需要继承JPush提供的JPushMessageReceiver类, 并如下新增一个 Intent-Filter -->
+        <receiver
+            android:name=".receiver.MyJPushMessageReceiver"
+            android:enabled="true">
+            <intent-filter>
+                <action android:name="cn.jpush.android.intent.RECEIVE_MESSAGE" />
+                <category android:name="${JPUSH_PKGNAME}" />
+            </intent-filter>
+        </receiver>
+
+        <!-- User defined. 用户自定义的广播接收器-->
+        <receiver
+            android:name=".receiver.CustomJPushMessageReceiver"
+            android:enabled="true">
+            <intent-filter>
+                <!--Required 用户注册SDK的intent-->
+                <action android:name="cn.jpush.android.intent.REGISTRATION" />
+                <!--Required 用户接收SDK消息的intent-->
+                <action android:name="cn.jpush.android.intent.MESSAGE_RECEIVED" />
+                <!--Required 用户接收SDK通知栏信息的intent-->
+                <action android:name="cn.jpush.android.intent.NOTIFICATION_RECEIVED" />
+                <!--Required 用户打开自定义通知栏的intent-->
+                <action android:name="cn.jpush.android.intent.NOTIFICATION_OPENED" />
+                <!-- 接收网络变化 连接/断开 since 1.6.3 -->
+                <action android:name="cn.jpush.android.intent.CONNECTION" />
+                <category android:name="${JPUSH_PKGNAME}" />
+            </intent-filter>
+        </receiver>
+
+        <!--第三方3：微信登录-->
+        <activity
+            android:name=".wxapi.WXEntryActivity"
+            android:label="@string/app_name"
+            android:exported="true"
+            android:launchMode="singleTop">
+
+            <intent-filter>
+                <action android:name="android.intent.action.VIEW"/>
+                <category android:name="android.intent.category.DEFAULT"/>
+
+            </intent-filter>
+
+        </activity>
+
+        <!--第三方4: 百度地图-->
+        <service
+            android:name="com.baidu.location.f"
+            android:enabled="true"
+            android:process=":remote">
+
+        </service>
+        <meta-data
+            android:name="com.baidu.lbsapi.API_KEY"
+            android:value="PWeQaInkm6F4ButQ7HPbjnRx8yDNuW67">
+
+        </meta-data>
+
+
+        <!--第三方5： Ping++ SDK -->
+        <activity
+            android:name="com.pingplusplus.android.PaymentActivity"
+            android:configChanges="orientation|keyboardHidden|navigation|screenSize"
+            android:launchMode="singleTop"
+            android:theme="@android:style/Theme.Translucent.NoTitleBar">
+
+        </activity>
+
+        <!-- 微信支付 -->
+        <!-- 1.需要将以下"替换成自己 APK 的包名"换成在微信平台上注册填写的包名 -->
+        <!-- 2.WxPayEntryActivity 这个类在 SDK 内部实现，开发者不需要额外实现该类 -->
+        <activity-alias
+            android:name="com.wingplus.coomohome.wxapi.WXPayEntryActivity"
+            android:exported="true"
+            android:targetActivity="com.pingplusplus.android.PaymentActivity" />
+
+        <!-- 支付宝 -->
+        <activity
+            android:name="com.alipay.sdk.app.H5PayActivity"
+            android:configChanges="orientation|keyboardHidden|navigation|screenSize"
+            android:exported="false"
+            android:screenOrientation="behind">
+
+        </activity>
+        <activity
+            android:name="com.alipay.sdk.auth.AuthActivity"
+            android:configChanges="orientation|keyboardHidden|navigation|screenSize"
+            android:exported="false"
+            android:screenOrientation="behind">
+
+        </activity>
+
+        <!--&lt;!&ndash; 银联支付 &ndash;&gt;-->
+        <!--<activity-->
+            <!--android:name="com.unionpay.uppay.PayActivity"-->
+            <!--android:configChanges="orientation|keyboardHidden|navigation|screenSize" />-->
+        <!--第三方5： 小能客服 SDK -->
+        <activity
+            android:name=".activity.XiaoNengChatActivity"
+            android:launchMode="singleTask"
+            android:screenOrientation="portrait"
+            android:theme="@android:style/Theme.NoTitleBar" />
+        <activity
+            android:name="cn.xiaoneng.activity.ChatActivity"
+            android:launchMode="singleTask"
+            android:screenOrientation="portrait"
+            android:theme="@android:style/Theme.NoTitleBar" />
+        <activity
+            android:name="cn.xiaoneng.activity.LeaveMsgActivity"
+            android:launchMode="singleTask"
+            android:screenOrientation="portrait"
+            android:theme="@android:style/Theme.NoTitleBar" />
+        <activity
+            android:name="cn.xiaoneng.activity.ShowCameraActivity"
+            android:configChanges="keyboard|keyboardHidden|orientation|screenLayout|uiMode|screenSize|smallestScreenSize|navigation|layoutDirection|touchscreen|locale|mnc|mcc|fontScale"
+            android:launchMode="singleTask"
+            android:screenOrientation="portrait"
+            android:theme="@style/MyDialogTopRight" >
+        </activity>
+        <activity
+            android:name="cn.xiaoneng.activity.ShowAlbumActivity"
+            android:launchMode="singleTask"
+            android:screenOrientation="portrait"
+            android:theme="@android:style/Theme.NoTitleBar" >
+        </activity>
+        <activity
+            android:name="cn.xiaoneng.activity.ValuationActivity"
+            android:screenOrientation="portrait"
+            android:theme="@style/valuationdialog" >
+        </activity>
+        <activity
+            android:name="cn.xiaoneng.activity.ShowPictureActivity"
+            android:launchMode="singleTask"
+            android:screenOrientation="portrait"
+            android:theme="@android:style/Theme.NoTitleBar" >
+        </activity>
+        <activity
+            android:name="cn.xiaoneng.activity.XNExplorerActivity"
+            android:launchMode="singleTask"
+            android:screenOrientation="portrait"
+            android:theme="@android:style/Theme.NoTitleBar" >
+        </activity>
+        <activity
+            android:name="cn.xiaoneng.video.VideoPreviewActivity"
+            android:screenOrientation="portrait"
+            android:theme="@android:style/Theme.NoTitleBar" >
+        </activity>
+        <activity
+            android:name="cn.xiaoneng.video.RecordVideoActivity"
+            android:screenOrientation="portrait"
+            android:theme="@android:style/Theme.NoTitleBar" >
+        </activity>
+        <activity
+            android:name="cn.xiaoneng.video.XNVideoPlayer"
+            android:screenOrientation="portrait"
+            android:theme="@android:style/Theme.NoTitleBar" >
+        </activity>
+        <!-- ***************************小能SDK所需要receiver和Service ********************* -->
+        <service android:name="cn.xiaoneng.xpush.pushxiaoneng.XPushIMService" >
+        </service>
+        <receiver
+            android:name="cn.xiaoneng.xpush.XPushReceiver"
+            android:exported="true" >
+            <intent-filter android:priority="1000" >
+                <action android:name="android.intent.action.BOOT_COMPLETED" />
+                <action android:name="android.intent.action.USER_PRESENT" />
+                <action android:name="android.net.conn.CONNECTIVITY_CHANGE" />
+                <action android:name="android.net.wifi.STATE_CHANGE" />
+                <action android:name="cn.xiaoneng.xpush.service" />
+            </intent-filter>
+        </receiver>
+
+        <meta-data
+            android:name="com.wingplus.coomohome.component.MyGlide"
+            android:value="GlideModule">
+
+        </meta-data>
+    </application>
+
+</manifest>

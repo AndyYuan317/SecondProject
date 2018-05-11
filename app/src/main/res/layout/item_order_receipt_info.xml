@@ -1,0 +1,299 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical">
+
+    <RelativeLayout
+        android:id="@+id/receipt_rl"
+        android:layout_width="match_parent"
+        android:layout_height="48dp"
+        android:layout_marginTop="10dp"
+        android:background="@color/white"
+        android:minWidth="62dp"
+        android:paddingStart="16dp">
+
+        <TextView
+            android:id="@+id/receipt"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentStart="true"
+            android:layout_centerVertical="true"
+            android:minWidth="62dp"
+            android:text="@string/word_receipt_type"
+            android:textColor="@color/titleGrey"
+            android:textSize="12sp" />
+
+        <TextView
+            android:id="@+id/receipt_type"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerVertical="true"
+            android:layout_toEndOf="@id/receipt"
+            android:text="不需要发票"
+            android:textColor="@color/titleBlack"
+            android:textSize="14sp" />
+
+        <ImageView
+            android:id="@+id/change"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentEnd="true"
+            android:layout_centerVertical="true"
+            android:paddingEnd="16dp"
+            android:paddingStart="16dp"
+            android:src="@drawable/icon_more" />
+    </RelativeLayout>
+
+    <LinearLayout
+        android:id="@+id/receipt_company_info"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:visibility="gone">
+
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="1px"
+            android:layout_marginStart="16dp"
+            android:background="@color/titleGray" />
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="52dp"
+            android:background="@color/white"
+            android:gravity="center|start"
+            android:orientation="horizontal"
+            android:paddingStart="16dp">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginEnd="16dp"
+                android:gravity="center"
+                android:text="发票抬头"
+                android:textColor="@color/titleGrey"
+                android:textSize="12sp" />
+
+            <EditText
+                android:id="@+id/receipt_title"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:background="@color/white"
+                android:gravity="center|start"
+                android:hint="请输入发票抬头"
+                android:lines="1"
+                android:maxLines="1"
+                android:maxLength="50"
+                android:text=""
+                android:textColor="@color/titleBlack"
+                android:textSize="14sp" />
+
+        </LinearLayout>
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="1px"
+            android:layout_marginStart="16dp"
+            android:background="@color/titleGray" />
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="52dp"
+            android:background="@color/white"
+            android:gravity="center|start"
+            android:orientation="horizontal"
+            android:paddingStart="16dp">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginEnd="16dp"
+                android:gravity="center"
+                android:text="公司税号"
+                android:textColor="@color/titleGrey"
+                android:textSize="12sp" />
+
+            <EditText
+                android:id="@+id/receipt_num"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:background="@color/white"
+                android:gravity="center|start"
+                android:hint="请输入公司税号"
+                android:lines="1"
+                android:maxLength="50"
+                android:maxLines="1"
+                android:text=""
+                android:textColor="@color/titleBlack"
+                android:textSize="14sp" />
+
+        </LinearLayout>
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="1px"
+            android:layout_marginStart="16dp"
+            android:background="@color/titleGray" />
+
+        <!--<LinearLayout-->
+            <!--android:layout_width="match_parent"-->
+            <!--android:layout_height="52dp"-->
+            <!--android:background="@color/white"-->
+            <!--android:gravity="center|start"-->
+            <!--android:orientation="horizontal"-->
+            <!--android:paddingStart="16dp">-->
+
+            <!--<TextView-->
+                <!--android:layout_width="wrap_content"-->
+                <!--android:layout_height="wrap_content"-->
+                <!--android:layout_marginEnd="16dp"-->
+                <!--android:gravity="center"-->
+                <!--android:text="公司地址"-->
+                <!--android:textColor="@color/titleGrey"-->
+                <!--android:textSize="12sp" />-->
+
+            <!--<EditText-->
+                <!--android:id="@+id/receipt_address"-->
+                <!--android:layout_width="match_parent"-->
+                <!--android:layout_height="match_parent"-->
+                <!--android:background="@color/white"-->
+                <!--android:gravity="center|start"-->
+                <!--android:hint="请输入公司地址"-->
+                <!--android:lines="1"-->
+                <!--android:maxLength="200"-->
+                <!--android:maxLines="1"-->
+                <!--android:text=""-->
+                <!--android:textColor="@color/titleBlack"-->
+                <!--android:textSize="14sp" />-->
+
+        <!--</LinearLayout>-->
+
+        <!--<TextView-->
+            <!--android:layout_width="match_parent"-->
+            <!--android:layout_height="1px"-->
+            <!--android:layout_marginStart="16dp"-->
+            <!--android:background="@color/titleGray" />-->
+
+        <!--<LinearLayout-->
+            <!--android:layout_width="match_parent"-->
+            <!--android:layout_height="52dp"-->
+            <!--android:background="@color/white"-->
+            <!--android:gravity="center|start"-->
+            <!--android:orientation="horizontal"-->
+            <!--android:paddingStart="16dp">-->
+
+            <!--<TextView-->
+                <!--android:layout_width="wrap_content"-->
+                <!--android:layout_height="wrap_content"-->
+                <!--android:layout_marginEnd="16dp"-->
+                <!--android:gravity="center"-->
+                <!--android:text="开户银行"-->
+                <!--android:textColor="@color/titleGrey"-->
+                <!--android:textSize="12sp" />-->
+
+            <!--<EditText-->
+                <!--android:id="@+id/receipt_bank"-->
+                <!--android:layout_width="match_parent"-->
+                <!--android:layout_height="match_parent"-->
+                <!--android:background="@color/white"-->
+                <!--android:gravity="center|start"-->
+                <!--android:hint="请输入开户银行"-->
+                <!--android:lines="1"-->
+                <!--android:maxLength="200"-->
+                <!--android:maxLines="1"-->
+                <!--android:text=""-->
+                <!--android:textColor="@color/titleBlack"-->
+                <!--android:textSize="14sp" />-->
+
+        <!--</LinearLayout>-->
+
+        <!--<TextView-->
+            <!--android:layout_width="match_parent"-->
+            <!--android:layout_height="1px"-->
+            <!--android:layout_marginStart="16dp"-->
+            <!--android:background="@color/titleGray" />-->
+
+        <!--<LinearLayout-->
+            <!--android:layout_width="match_parent"-->
+            <!--android:layout_height="52dp"-->
+            <!--android:background="@color/white"-->
+            <!--android:gravity="center|start"-->
+            <!--android:orientation="horizontal"-->
+            <!--android:paddingStart="16dp">-->
+
+            <!--<TextView-->
+                <!--android:layout_width="wrap_content"-->
+                <!--android:layout_height="wrap_content"-->
+                <!--android:layout_marginEnd="16dp"-->
+                <!--android:gravity="center"-->
+                <!--android:text="银行账户"-->
+                <!--android:textColor="@color/titleGrey"-->
+                <!--android:textSize="12sp" />-->
+
+            <!--<EditText-->
+                <!--android:id="@+id/receipt_bank_num"-->
+                <!--android:layout_width="match_parent"-->
+                <!--android:layout_height="match_parent"-->
+                <!--android:background="@color/white"-->
+                <!--android:gravity="center|start"-->
+                <!--android:hint="请输入银行账户"-->
+                <!--android:inputType="number"-->
+                <!--android:lines="1"-->
+                <!--android:maxLength="200"-->
+                <!--android:maxLines="1"-->
+                <!--android:text=""-->
+                <!--android:textColor="@color/titleBlack"-->
+                <!--android:textSize="14sp" />-->
+
+        <!--</LinearLayout>-->
+
+        <!--<TextView-->
+            <!--android:layout_width="match_parent"-->
+            <!--android:layout_height="1px"-->
+            <!--android:layout_marginStart="16dp"-->
+            <!--android:background="@color/titleGray" />-->
+
+        <!--<LinearLayout-->
+            <!--android:layout_width="match_parent"-->
+            <!--android:layout_height="52dp"-->
+            <!--android:background="@color/white"-->
+            <!--android:gravity="center|start"-->
+            <!--android:orientation="horizontal"-->
+            <!--android:paddingStart="16dp">-->
+
+            <!--<TextView-->
+                <!--android:layout_width="wrap_content"-->
+                <!--android:layout_height="wrap_content"-->
+                <!--android:layout_marginEnd="16dp"-->
+                <!--android:gravity="center"-->
+                <!--android:text="公司电话"-->
+                <!--android:textColor="@color/titleGrey"-->
+                <!--android:textSize="12sp" />-->
+
+            <!--<EditText-->
+                <!--android:id="@+id/receipt_phone"-->
+                <!--android:layout_width="match_parent"-->
+                <!--android:layout_height="match_parent"-->
+                <!--android:background="@color/white"-->
+                <!--android:gravity="center|start"-->
+                <!--android:lines="1"-->
+                <!--android:maxLength="200"-->
+                <!--android:maxLines="1"-->
+                <!--android:inputType="phone"-->
+                <!--android:hint="请输入公司电话"-->
+                <!--android:text=""-->
+                <!--android:textColor="@color/titleBlack"-->
+                <!--android:textSize="14sp" />-->
+
+        <!--</LinearLayout>-->
+
+
+        <!--<TextView-->
+            <!--android:layout_width="match_parent"-->
+            <!--android:layout_height="1px"-->
+            <!--android:layout_marginStart="16dp"-->
+            <!--android:background="@color/titleGray" />-->
+    </LinearLayout>
+</LinearLayout>

@@ -1,0 +1,114 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:background="@color/white"
+    android:orientation="vertical"
+    android:paddingStart="12dp"
+    android:paddingTop="16dp"
+    >
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:gravity="center|start">
+
+        <android.support.v7.widget.CardView
+            android:layout_width="32dp"
+            android:layout_height="32dp"
+            android:background="@color/white"
+            app:cardCornerRadius="16dp">
+
+            <ImageView
+                android:id="@+id/user_headImg"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:src="@drawable/icon_unregisteredavatar" />
+
+        </android.support.v7.widget.CardView>
+
+        <TextView
+            android:id="@+id/user_name"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginEnd="10dp"
+            android:layout_marginStart="10dp"
+            android:text="Alles"
+            android:textSize="14sp"
+            android:textColor="@color/titleBlack" />
+
+        <RelativeLayout
+            android:layout_width="16dp"
+            android:layout_height="15dp"
+            android:background="@color/colorPrimary">
+
+            <com.wingplus.coomohome.component.SquareImage
+                android:layout_width="15dp"
+                android:layout_height="wrap_content"
+                android:src="@drawable/icon_vgrade" />
+
+            <TextView
+                android:id="@+id/user_lv"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentBottom="true"
+                android:layout_alignParentEnd="true"
+                android:padding="1dp"
+                android:text="7"
+                android:textColor="@color/white"
+                android:textSize="7sp"
+                android:typeface="sans" />
+        </RelativeLayout>
+
+
+        <com.wingplus.coomohome.component.MyRatingStar
+            android:id="@+id/commit_star"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="5dp"
+            android:gravity="center"
+            app:star_size="15dp"
+            app:can_chose="false" />
+    </LinearLayout>
+
+    <TextView
+        android:id="@+id/commit_time"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="10dp"
+        android:text="2017.09.13  08:56"
+        android:textColor="@color/titleGray"
+        android:textSize="12sp" />
+
+    <TextView
+        android:id="@+id/commit_txt"
+        android:paddingEnd="16dp"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="10dp"
+        android:text="简单而美丽，买回来第一件事就是测试一下，这个价格还是很值得的，爱的就是这线条美感。"
+        android:textColor="@color/titleBlack"
+        android:textSize="14sp" />
+
+    <com.wingplus.coomohome.component.GridViewMeasure
+        android:id="@+id/commit_img"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:paddingEnd="16dp"
+        android:layout_marginTop="10dp"
+        android:columnWidth="75dp"
+        android:horizontalSpacing="6dp"
+        android:numColumns="4"
+        android:scrollbars="none"
+        android:stretchMode="none"
+        android:verticalSpacing="10dp">
+
+    </com.wingplus.coomohome.component.GridViewMeasure>
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="1px"
+        android:layout_marginTop="16dp"
+        android:background="@color/titleGray"/>
+
+</LinearLayout>

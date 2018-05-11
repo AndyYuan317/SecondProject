@@ -1,0 +1,169 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:orientation="vertical">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="158dp"
+        android:background="@drawable/bg_personalcenter"
+        android:orientation="horizontal">
+
+        <android.support.v7.widget.CardView
+            android:id="@+id/profile_img"
+            android:layout_width="82dp"
+            android:layout_height="82dp"
+            android:layout_gravity="center"
+            android:layout_marginStart="16dp"
+            app:cardCornerRadius="41dp">
+
+            <ImageView
+                android:id="@+id/img"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:src="@drawable/icon_unregisteredavatar" />
+        </android.support.v7.widget.CardView>
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:gravity="center"
+                android:orientation="vertical"
+                android:padding="15dp">
+
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal">
+
+                    <TextView
+                        android:id="@+id/user_name"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="会员等级"
+                        android:textColor="@color/titleGray"
+                        android:textSize="16sp" />
+
+                    <RelativeLayout
+                        android:layout_width="16dp"
+                        android:layout_height="15dp"
+                        android:layout_gravity="center"
+                        android:layout_marginStart="4dp"
+                        android:background="@color/colorPrimary">
+
+                        <com.wingplus.coomohome.component.SquareImage
+                            android:id="@+id/user_lv"
+                            android:layout_width="15dp"
+                            android:layout_height="wrap_content"
+                            android:src="@drawable/icon_vgrade" />
+
+                        <TextView
+                            android:id="@+id/lv"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_alignParentBottom="true"
+                            android:layout_alignParentEnd="true"
+                            android:padding="1dp"
+                            android:textColor="@color/white"
+                            android:textSize="7sp"
+                            android:typeface="sans" />
+                    </RelativeLayout>
+                </LinearLayout>
+
+
+                <ProgressBar
+                    android:id="@+id/lv_bar"
+                    style="@android:style/Widget.ProgressBar.Horizontal"
+                    android:layout_width="match_parent"
+                    android:layout_height="4dp"
+                    android:layout_marginTop="8dp"
+                    android:progressDrawable="@drawable/bg_color_integral_radius"
+                    android:max="100"
+                    android:progress="0"/>
+
+                <TextView
+                    android:id="@+id/lv_point"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="start"
+                    android:layout_marginTop="8dp"
+                    android:gravity="center"
+                    android:paddingBottom="1dp"
+                    android:paddingTop="1dp"
+                    android:text="积分 0/0"
+                    android:textColor="@color/integral_word"
+                    android:textSize="12sp" />
+            </LinearLayout>
+
+            <LinearLayout
+                android:id="@+id/daily_sign"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentEnd="true"
+                android:layout_margin="16dp"
+                android:background="@drawable/bg_text_rectangle_border_primary_8"
+                android:gravity="center"
+                android:orientation="horizontal"
+                android:paddingBottom="3dp"
+                android:paddingEnd="8dp"
+                android:paddingStart="8dp"
+                android:paddingTop="3dp">
+
+                <ImageView
+                    android:layout_width="14dp"
+                    android:layout_height="14dp"
+                    android:background="@color/translate"
+                    android:src="@drawable/time" />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="2dp"
+                    android:background="@color/translate"
+                    android:text="@string/word_daily_sign"
+                    android:textColor="@color/colorPrimary"
+                    android:textSize="12sp" />
+
+            </LinearLayout>
+        </RelativeLayout>
+
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@color/translate"
+        android:gravity="center"
+        android:paddingBottom="5dp"
+        android:paddingTop="10dp">
+
+
+        <TextView
+            android:layout_width="20dp"
+            android:layout_height="1px"
+            android:background="@color/titleGray" />
+
+        <TextView
+            android:id="@+id/title"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginEnd="10dp"
+            android:layout_marginStart="10dp"
+            android:text="历史明细"
+            android:textColor="@color/titleGray"
+            android:textSize="12sp"/>
+
+        <TextView
+            android:layout_width="20dp"
+            android:layout_height="1px"
+            android:background="@color/titleGray" />
+    </LinearLayout>
+
+</LinearLayout>
